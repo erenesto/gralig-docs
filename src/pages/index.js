@@ -10,15 +10,11 @@ import { changeLocale } from 'gatsby-plugin-intl'
 
 const IndexPage = () => {
   const { isDark } = useContext(ThemeContext)
-  const [currentLanguage, setCurrentLanguage] = useState('')
   const intl = useIntl()
-
-  console.log(intl)
 
   useEffect(() => {
     const ln = localStorage.getItem('gatsby-intl-language')
-    setCurrentLanguage(ln)
-    if (ln !== null) {
+    if (ln && ln !== 'en') {
       changeLocale(ln)
     }
   }, [])
@@ -26,7 +22,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO
-        lang={currentLanguage}
+        lang={intl.locale}
         title={intl.formatMessage({ id: 'pages.index' })}
         siteTitle={intl.formatMessage({ id: 'title' })}
       />

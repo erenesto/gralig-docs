@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 
-// import remark2react from 'remark-react'
 import remark2rehype from 'remark-rehype'
 import rehypeRaw from 'rehype-raw'
 import remarkParse from 'remark-parse'
@@ -21,7 +20,20 @@ import {
 
 const Markdown = ({ markdown, mdtype }) => {
   const sanitizeSchema = merge(gh, {
-    attributes: { '*': ['className', 'class'] },
+    attributes: {
+      '*': ['className', 'class'],
+      input: [
+        ['type', 'button'],
+        ['disabled', false],
+      ],
+    },
+    required: {
+      input: {
+        type: 'button',
+        disabled: false,
+      },
+    },
+    tagNames: ['button'],
   })
 
   const renderMDHTML = useMemo(
