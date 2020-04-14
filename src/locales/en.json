@@ -1,0 +1,38 @@
+{
+  "title": "Gralig CSS",
+  "description": "A modest, grayish CSS Library",
+  "author": "Eren Guldas",
+  "pages": {
+    "index": "Home",
+    "docs": "Gralig Documentation",
+    "404": "Error 404"
+  },
+  "sidenavLinks": {
+    "docs": { "name": "Introduction" },
+    "grid": { "name": "Grid" },
+    "dark": { "name": "Dark Mode" },
+    "vars": { "name": "Variables" },
+    "responsive": { "name": "Responsive" },
+    "utils": { "name": "Utils" },
+    "typography": { "name": "Typography" },
+    "buttons": { "name": "Buttons" },
+    "form": { "name": "Form" },
+    "nav": { "name": "Nav" },
+    "navbar": { "name": "Navbar" },
+    "footer": { "name": "Footer" },
+    "breadcrumb": { "name": "Breadcrumb" },
+    "card": { "name": "Card" },
+    "alerts": { "name": "Alerts" },
+    "list": { "name": "List" },
+    "table": { "name": "Table" },
+    "dropdown": { "name": "Dropdown" },
+    "progress": { "name": "Progress" },
+    "loading": { "name": "Loading" },
+    "modal": { "name": "Modal" }
+  },
+  "words": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "docs": "Docs"
+  }
+}

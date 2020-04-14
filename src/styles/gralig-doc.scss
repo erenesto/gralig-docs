@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:300,400,600&display=swap');
+@import 'gralig/scss/abstracts/all.scss';
+@import 'gralig/scss/themes/themes.scss';
+
+* {
+  transition: background-color 0.3s ease-in;
+}
+
+.gra-doc-h1,
+.gra-doc-sub-h1 {
+  font-size: 3.4rem;
+  margin-bottom: $space-xl;
+}
+.gra-doc-h2,
+.gra-doc-sub-h2 {
+  font-size: 2.4rem;
+  margin-bottom: $space-xl;
+  margin-top: $space-xxl;
+}
+
+.gra {
+  &-home-description {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &-home-logo {
+    max-height: 7rem;
+    margin-bottom: $space;
+  }
+
+  &-home-title {
+    font-size: $font-size;
+    letter-spacing: 0;
+    font-weight: $font-normal;
+  }
+
+  &-home-footer {
+    position: absolute;
+    bottom: $space-l;
+    width: 36rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-nav {
+    .nav-link {
+      cursor: pointer;
+      line-height: 0;
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-wrapper {
+    min-height: 100vh;
+  }
+
+  &-content-wrapper {
+    @include min-width($breakpoint-s) {
+      margin-left: 24rem;
+    }
+  }
+
+  &-content {
+    max-width: 64rem;
+    width: 100%;
+    padding-left: $space-xl;
+    padding-right: $space-xl;
+    padding-top: calc(#{$space-xxl + 7rem});
+    padding-bottom: $space-xxl;
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  &-navbar {
+    padding-left: $space-l;
+    padding-right: $space-l;
+    position: fixed;
+    z-index: 80;
+    width: 100%;
+    background-color: $color-background;
+    top: 0;
+  }
+  &-menu-icon-item {
+    margin-left: 1rem;
+    display: inline-block;
+    line-height: 0;
+    @include min-width($breakpoint-s) {
+      display: none;
+    }
+  }
+  &-menu-icon-wrapper {
+    height: 3.4rem;
+    width: 3.4rem;
+    position: relative;
+  }
+
+  &-menu-icon {
+    display: inline-block;
+    width: 1.8rem;
+    height: 0.4rem;
+    background-color: $color-light;
+    border-radius: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: all 0.2s ease-in;
+    &::before,
+    &::after {
+      content: '';
+      width: 1.8rem;
+      height: 0.4rem;
+      background-color: $color-light;
+      border-radius: 1px;
+      position: absolute;
+      transition: all 0.2s ease-in;
+    }
+    &::before {
+      top: -0.6rem;
+    }
+    &::after {
+      top: 0.6rem;
+    }
+    &.open {
+      transform: rotate(45deg) translateX(-1px) translateY(-1px);
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        top: 0;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-lang {
+    display: flex;
+    margin-left: $space;
+    font-size: 1.3rem;
+    align-items: center;
+    &-active {
+      font-size: $font-size;
+      font-weight: $font-bold;
+    }
+    .gra-menu-icon-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .gra-menu-icon-wrapper:first-of-type {
+      position: relative;
+      margin-right: 4px;
+      &::before {
+        content: '\02044';
+        position: absolute;
+        right: -5px;
+        font-weight: $font-normal;
+        font-size: $font-size;
+      }
+    }
+  }
+
+  &-side-nav-backdrop {
+    display: block;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 90;
+    height: 100vh;
+    width: 100%;
+    @include min-width($breakpoint-s) {
+      display: none;
+    }
+  }
+
+  &-sidenav {
+    border-right: 1px solid $color-border;
+    background-color: $color-background;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 60%;
+    font-size: $font-size-s;
+    transform: translateX(-110%);
+    transition: transform 0.2s ease-in;
+    z-index: 99;
+    overflow-y: auto;
+    padding-bottom: $space-xl;
+    @include themify($themes) {
+      border-color: themed('colorBorder');
+      background-color: themed('colorBackground');
+    }
+
+    @include min-width($breakpoint-s) {
+      width: 24rem;
+      min-height: calc(100vh - 7rem);
+      height: auto;
+      transform: translateX(0);
+      margin-top: 7rem;
+    }
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    &-list {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      background-color: $color-background;
+      height: calc(100vh + 7rem);
+      z-index: 10;
+      @include themify($themes) {
+        background-color: themed('colorBackground');
+      }
+    }
+
+    &-item {
+      min-height: 4.4rem;
+      padding: 0;
+      border-bottom: 0;
+    }
+    &-item-link {
+      display: inline-block;
+      padding-top: $space-m;
+      padding-bottom: $space-m;
+      padding-left: $space-xl;
+      padding-right: $space-m;
+      width: 100%;
+      position: relative;
+      line-height: 1;
+      &:hover {
+        text-decoration: none !important;
+        color: $color-main;
+        &::before {
+          height: 5px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &::before {
+        position: absolute;
+        top: 40%;
+        left: 2rem;
+        width: 5px;
+        height: 0px;
+        background-color: $color-main;
+        border-radius: 50%;
+        content: '';
+        transition: all 0.2s ease-in;
+        opacity: 0;
+        visibility: hidden;
+        @include themify($themes) {
+          background-color: themed('colorLinkHover');
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0.5rem;
+        height: 0;
+        background-color: $color-light;
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in;
+        @include themify($themes) {
+          background-color: themed('colorLinkFont');
+        }
+      }
+      &.gra-sidenav-active-link {
+        &::after {
+          height: 60%;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &-sidenav-group {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: $space;
+    padding-top: $space;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $color-border;
+    }
+    @include themify($themes) {
+      border-color: themed('colorBorder');
+    }
+  }
+
+  &-code-highlight {
+    margin-bottom: $space-l;
+    position: relative;
+    .btn-copy-to-clipboard {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 3.4rem;
+      transition: none;
+      &:hover {
+        background: $color-light;
+        opacity: 1;
+        transition: none;
+        @include themify($themes) {
+          background-color: themed('colorMain');
+          color: themed('colorFontButton');
+        }
+        svg path {
+          @include themify($themes) {
+            fill: themed('colorFontButton');
+          }
+        }
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    pre {
+      padding: $space-l !important;
+      border-radius: $border-radius;
+    }
+    code {
+      border: 0;
+      font-size: $font-size-s;
+      padding: 0;
+      text-shadow: none;
+      background-color: transparent;
+      margin: 0;
+    }
+  }
+
+  &-s-wrapper {
+    margin-top: $space-xl;
+    margin-bottom: $space-xl;
+  }
+
+  &-typography {
+    .heading-wrapper {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      min-height: 5rem;
+      @include min-width($breakpoint-m) {
+        width: 80%;
+      }
+    }
+    .heading,
+    .subheading {
+      margin: 0;
+    }
+    .headings-small-info {
+      font-size: 14px;
+      width: 13rem;
+      code {
+        margin-right: 10px;
+        font-size: 10px;
+        width: 40px;
+      }
+    }
+  }
+}

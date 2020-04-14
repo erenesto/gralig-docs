@@ -1,0 +1,38 @@
+{
+  "title": "Gralig CSS",
+  "description": "Sade, grimsi CSS Kütüphanesi",
+  "author": "Eren Guldas",
+  "pages": {
+    "index": "Ana Sayfa",
+    "docs": "Gralig Dökümantasyonu",
+    "404": "Hata 404"
+  },
+  "sidenavLinks": {
+    "docs": { "name": "Giriş" },
+    "grid": { "name": "Izgara(Grid)" },
+    "dark": { "name": "Karanlık Mod" },
+    "vars": { "name": "Değişkenler" },
+    "responsive": { "name": "Mobil Uyumluluk" },
+    "utils": { "name": "Yardımcılar" },
+    "typography": { "name": "Tipografi" },
+    "buttons": { "name": "Butonlar" },
+    "form": { "name": "Form" },
+    "nav": { "name": "Navigasyon" },
+    "navbar": { "name": "Navigasyon Barı" },
+    "footer": { "name": "Altbilgi" },
+    "breadcrumb": { "name": "Gezinti Menüsü" },
+    "card": { "name": "Kart" },
+    "alerts": { "name": "Uyarılar" },
+    "list": { "name": "Liste" },
+    "table": { "name": "Tablo" },
+    "dropdown": { "name": "Açılır Liste" },
+    "progress": { "name": "İlerlemeler" },
+    "loading": { "name": "Beklemeler" },
+    "modal": { "name": "Açılır Pencere" }
+  },
+  "words": {
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "docs": "Döküman"
+  }
+}
