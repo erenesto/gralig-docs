@@ -3,8 +3,6 @@ import React, { useContext, useState, useEffect } from 'react'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 import {
   defaultStyle,
-  dark,
-  atomOneLight,
   atomOneDark,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import { CopyToClipboard } from 'react-copy-to-clipboard'

@@ -4,7 +4,7 @@ mdtype: 'MD'
 section: 'doc'
 ---
 
-Gralig sade, gri tonlu bir CSS kütüphanesi ve gzip hali 8KB olan bir CSS dosyasından oluşmakta. Eğer projelerinizde kapsamlı bir CSS frameworküne ihtiyacınız yoksa, bu kütüphaneyi başlangıç yardımcınız olarak kullanabilirsiniz.
+Gralig sade, gri tonlu bir CSS kütüphanesi ve gzip hali 8KB olan bir `.css` dosyasından oluşmakta. Eğer projelerinizde kapsamlı bir CSS frameworküne ihtiyacınız yoksa, bu kütüphaneyi başlangıç yardımcınız olarak kullanabilirsiniz.
 
 Gralig size küçük element stilleri ile birlikte basit bir grid sistemi ve karanlık mod özellikleri sağlamakta. Herhangi bir kısmında yardımcı olarak JS kullanılmadı.
 

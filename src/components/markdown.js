@@ -21,26 +21,25 @@ import {
 const Markdown = ({ markdown, mdtype }) => {
   const sanitizeSchema = merge(gh, {
     attributes: {
-      '*': ['className', 'class'],
-      input: [
-        ['type', 'button'],
-        ['disabled', false],
-      ],
-    },
-    required: {
+      '*': ['className', 'class', 'placeholder'],
       input: {
-        type: 'button',
+        type: ['text', 'email', 'button'],
         disabled: false,
       },
     },
-    tagNames: ['button'],
+    required: {
+      input: {
+        disabled: false,
+      },
+    },
+    tagNames: ['button', 'label', 'form', 'fieldset', 'legend', 'textarea'],
   })
 
   const renderMDHTML = useMemo(
     () =>
       unified()
         .use(remarkParse)
-        .use(remark2rehype, { allowDangerousHTML: true })
+        .use(remark2rehype, { allowDangerousHtml: true })
         .use(rehypeRaw)
         .use(format)
         .use(stringify)

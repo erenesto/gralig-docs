@@ -96,8 +96,12 @@ You can use buttons created in different sizes, types and colors.
 
 ## Other Types
 
-[Link](# 'button')
+<div class="gra-s-wrapper">
+
+[Link](# 'Link Button')
 <input class="btn" type="button" value="Input" />
+
+</div>
 
 ```html
 <a class="btn" href="#" type="button">Link</a>

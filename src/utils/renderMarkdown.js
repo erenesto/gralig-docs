@@ -50,29 +50,44 @@ export const RenderPre = args => {
 export const RenderAnchor = ({ href, title, children }) => {
   const titleToLowercase = title ? title.toLowerCase() : ''
 
-  if (title === null || title === undefined) {
-    return null
-  } else if (
-    titleToLowercase.includes('button') ||
+  if (
+    (title !== null && titleToLowercase.includes('button')) ||
     titleToLowercase.includes('buton')
   ) {
+    if (!href || href.startsWith('http')) {
+      return (
+        <a href={href} className="btn" title={title}>
+          {children}
+        </a>
+      )
+    }
     return (
       <a className="btn" href={href} title={title}>
         {children}
       </a>
     )
-  }
-  if (!href || href.startsWith('http')) {
+  } else if (
+    (title !== null && titleToLowercase.includes('daha')) ||
+    titleToLowercase.includes('more')
+  ) {
     return (
-      <a href={href} title={title}>
-        {children}
-      </a>
-    )
-  } else {
-    return (
-      <Link to={href} title={title}>
+      <Link className="btn btn-outline" to={href} title={title}>
         {children}
       </Link>
     )
+  } else {
+    if (!href || href.startsWith('http')) {
+      return (
+        <a href={href} title={title}>
+          {children}
+        </a>
+      )
+    } else {
+      return (
+        <Link to={href} title={title}>
+          {children}
+        </Link>
+      )
+    }
   }
 }

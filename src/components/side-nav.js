@@ -51,6 +51,22 @@ const SideNav = () => {
         name: intl.formatMessage({ id: 'sidenavLinks.form.name' }),
       },
       {
+        goTo: 'custom-inputs',
+        name: intl.formatMessage({ id: 'sidenavLinks.custom-inputs.name' }),
+      },
+      {
+        goTo: 'checkbox',
+        name: intl.formatMessage({ id: 'sidenavLinks.checkbox.name' }),
+      },
+      {
+        goTo: 'radio',
+        name: intl.formatMessage({ id: 'sidenavLinks.radio.name' }),
+      },
+      {
+        goTo: 'switch',
+        name: intl.formatMessage({ id: 'sidenavLinks.switch.name' }),
+      },
+      {
         goTo: 'nav',
         name: intl.formatMessage({ id: 'sidenavLinks.nav.name' }),
       },

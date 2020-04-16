@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
         <SideNav />
         <main className="gra-content-wrapper">
           <div className="gra-content">{children}</div>
+          <footer className="footer">© 2019, Built with ❤️&amp; Gralig</footer>
         </main>
       </div>
     </div>

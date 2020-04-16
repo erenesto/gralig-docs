@@ -96,8 +96,12 @@ Farklı boyutlarda, tiplerde ve renklerde oluşturulmuş butonları kullanabilir
 
 ## Diğer Tipler
 
-[Link](# 'button')
+<div class="gra-s-wrapper">
+
+[Link](# 'Link Butonu')
 <input class="btn" type="button" value="Input" />
+
+</div>
 
 ```html
 <a class="btn" href="#" type="button">Link</a>

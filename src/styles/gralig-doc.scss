@@ -69,14 +69,14 @@
   }
 
   &-content {
-    max-width: 64rem;
+    max-width: 72rem;
     width: 100%;
     padding-left: $space-xl;
     padding-right: $space-xl;
     padding-top: calc(#{$space-xxl + 7rem});
     padding-bottom: $space-xxl;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: calc(100vh - 7.3rem);
     overflow-y: auto;
   }
 
@@ -148,7 +148,7 @@
     font-size: 1.3rem;
     align-items: center;
     &-active {
-      font-size: $font-size;
+      font-size: 1.5rem;
       font-weight: $font-bold;
     }
     .gra-menu-icon-wrapper {
@@ -163,7 +163,7 @@
         position: absolute;
         right: -5px;
         font-weight: $font-normal;
-        font-size: $font-size;
+        font-size: 1.8rem;
       }
     }
   }
@@ -241,6 +241,7 @@
       width: 100%;
       position: relative;
       line-height: 1;
+
       &:hover {
         text-decoration: none !important;
         color: $color-main;
@@ -274,7 +275,7 @@
         left: 0;
         width: 0.5rem;
         height: 0;
-        background-color: $color-light;
+        background-color: $color-main;
         transform: translateY(-50%);
         opacity: 0;
         visibility: hidden;
@@ -334,12 +335,12 @@
       }
     }
     pre {
-      padding: $space-l !important;
+      padding: $space-m $space-l !important;
       border-radius: $border-radius;
     }
     code {
       border: 0;
-      font-size: $font-size-s;
+      font-size: 1.2rem;
       padding: 0;
       text-shadow: none;
       background-color: transparent;
@@ -382,4 +383,8 @@
       margin: 6px;
     }
   }
+}
+
+.form-group {
+  margin-bottom: 24px;
 }
