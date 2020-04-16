@@ -383,6 +383,28 @@
       margin: 6px;
     }
   }
+
+  &-section-nav,
+  &-section-breadcrumb {
+    p {
+      margin-bottom: 0;
+      font-size: inherit;
+    }
+  }
+  &-section-breadcrumb {
+    .breadcrumb-item:not(:first-child) a::before {
+      @include caret-icon(-45deg, 0, -50%, $color-main);
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: -4px;
+      margin-top: -2px;
+      content: '';
+      @include themify($themes) {
+        border-color: themed('colorBorder');
+      }
+    }
+  }
 }
 
 .form-group {

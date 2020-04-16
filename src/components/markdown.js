@@ -22,6 +22,7 @@ const Markdown = ({ markdown, mdtype }) => {
   const sanitizeSchema = merge(gh, {
     attributes: {
       '*': ['className', 'class', 'placeholder'],
+      li: ['className', 'class'],
       input: {
         type: ['text', 'email', 'button'],
         disabled: false,
@@ -32,7 +33,17 @@ const Markdown = ({ markdown, mdtype }) => {
         disabled: false,
       },
     },
-    tagNames: ['button', 'label', 'form', 'fieldset', 'legend', 'textarea'],
+    tagNames: [
+      'button',
+      'label',
+      'form',
+      'fieldset',
+      'legend',
+      'textarea',
+      'nav',
+      'header',
+      'footer',
+    ],
   })
 
   const renderMDHTML = useMemo(
@@ -56,27 +67,6 @@ const Markdown = ({ markdown, mdtype }) => {
         .processSync(markdown).result,
     [markdown]
   )
-
-  // const renderMD = useMemo(
-  //   () =>
-  //     unified()
-  //       .use(remarkParse)
-  //       .use(remark2react, {
-  //         remarkReactComponents: {
-  //           p: RenderParagraph,
-  //           code: RenderCode,
-  //           pre: RenderPre,
-  //           h2: RenderSubHeading,
-  //           a: RenderAnchor,
-  //         },
-  //       })
-  //       .processSync(markdown).result,
-  //   [markdown]
-  // )
-
-  // const renderMarkdownFile = () => {
-  //   return mdtype === 'MDHTML' ? renderMDHTML : renderMD
-  // }
 
   return <div>{renderMDHTML}</div>
 }

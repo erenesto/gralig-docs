@@ -50,6 +50,8 @@ export const RenderPre = args => {
 export const RenderAnchor = ({ href, title, children }) => {
   const titleToLowercase = title ? title.toLowerCase() : ''
 
+  console.log(titleToLowercase)
+
   if (
     (title !== null && titleToLowercase.includes('button')) ||
     titleToLowercase.includes('buton')
@@ -72,6 +74,39 @@ export const RenderAnchor = ({ href, title, children }) => {
   ) {
     return (
       <Link className="btn btn-outline" to={href} title={title}>
+        {children}
+      </Link>
+    )
+  } else if (
+    title !== null &&
+    titleToLowercase.includes('breadcrumblinkcurrent')
+  ) {
+    return (
+      <Link className="breadcrumb-link current" to={href} title={title}>
+        {children}
+      </Link>
+    )
+  } else if (title !== null && titleToLowercase.includes('breadcrumblink')) {
+    return (
+      <Link className="breadcrumb-link" to={href} title={title}>
+        {children}
+      </Link>
+    )
+  } else if (title !== null && titleToLowercase.includes('navlinkcurrent')) {
+    return (
+      <Link className="nav-link current" to={href} title={title}>
+        {children}
+      </Link>
+    )
+  } else if (title !== null && titleToLowercase.includes('navbarlogolink')) {
+    return (
+      <Link className="navbar-logo-link" to={href} title={title}>
+        {children}
+      </Link>
+    )
+  } else if (title !== null && titleToLowercase.includes('navlink')) {
+    return (
+      <Link className="nav-link" to={href} title={title}>
         {children}
       </Link>
     )

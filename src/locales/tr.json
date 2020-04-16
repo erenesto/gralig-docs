@@ -23,7 +23,7 @@
     "switch": { "name": "Anahtar" },
     "nav": { "name": "Navigasyon" },
     "navbar": { "name": "Navigasyon Barı" },
-    "footer": { "name": "Altbilgi" },
+    "footer": { "name": "Altbilgi Barı" },
     "breadcrumb": { "name": "Gezinti Menüsü" },
     "card": { "name": "Kart" },
     "alerts": { "name": "Uyarılar" },
