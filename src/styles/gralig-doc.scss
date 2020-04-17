@@ -18,6 +18,13 @@
   margin-top: $space-xxl;
 }
 
+.gra-doc-h3,
+.gra-doc-sub-h3 {
+  font-size: 2rem;
+  margin-bottom: $space-xl;
+  margin-top: $space-xxl;
+}
+
 .gra {
   &-home-description {
     width: 100%;
@@ -402,6 +409,23 @@
       content: '';
       @include themify($themes) {
         border-color: themed('colorBorder');
+      }
+    }
+  }
+  &-section-alerts {
+    .alerts-wrapper .alert:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
+  }
+  &-section-progress {
+    .progress-circle-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .progress-circle {
+      margin-right: 1.2rem;
+      .progress-circle-value {
+        stroke-dashoffset: 380;
       }
     }
   }

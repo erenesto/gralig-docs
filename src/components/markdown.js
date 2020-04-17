@@ -14,14 +14,27 @@ import merge from 'deepmerge'
 import {
   RenderCode,
   RenderPre,
-  RenderSubHeading,
+  RenderHeading2,
+  RenderHeading3,
   RenderAnchor,
 } from '../utils/renderMarkdown'
 
 const Markdown = ({ markdown, mdtype }) => {
   const sanitizeSchema = merge(gh, {
     attributes: {
-      '*': ['className', 'class', 'placeholder'],
+      '*': [
+        'className',
+        'class',
+        'placeholder',
+        'width',
+        'height',
+        'viewBox',
+        'fill',
+        'cx',
+        'cy',
+        'r',
+        'style',
+      ],
       li: ['className', 'class'],
       input: {
         type: ['text', 'email', 'button'],
@@ -43,6 +56,9 @@ const Markdown = ({ markdown, mdtype }) => {
       'nav',
       'header',
       'footer',
+      'svg',
+      'circle',
+      'path',
     ],
   })
 
@@ -60,7 +76,8 @@ const Markdown = ({ markdown, mdtype }) => {
           components: {
             code: RenderCode,
             pre: RenderPre,
-            h2: RenderSubHeading,
+            h2: RenderHeading2,
+            h3: RenderHeading3,
             a: RenderAnchor,
           },
         })

@@ -43,8 +43,8 @@ const SideNav = () => {
         name: intl.formatMessage({ id: 'sidenavLinks.typography.name' }),
       },
       {
-        goTo: 'buttons',
-        name: intl.formatMessage({ id: 'sidenavLinks.buttons.name' }),
+        goTo: 'button',
+        name: intl.formatMessage({ id: 'sidenavLinks.button.name' }),
       },
       {
         goTo: 'form',
@@ -87,8 +87,8 @@ const SideNav = () => {
         name: intl.formatMessage({ id: 'sidenavLinks.card.name' }),
       },
       {
-        goTo: 'alerts',
-        name: intl.formatMessage({ id: 'sidenavLinks.alerts.name' }),
+        goTo: 'alert',
+        name: intl.formatMessage({ id: 'sidenavLinks.alert.name' }),
       },
       {
         goTo: 'list',

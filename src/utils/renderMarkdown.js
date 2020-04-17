@@ -8,9 +8,17 @@ import CodeHighlighter from '../components/code-highlighter'
 //   return <p className="gra-doc-p">{children}</p>
 // }
 
-export const RenderSubHeading = ({ children, className }) => {
+export const RenderHeading2 = ({ children, className }) => {
   if (className !== 'heading' && className !== 'subheading') {
     return <h2 className="gra-doc-h2">{children}</h2>
+  } else {
+    return <h2 className={className}>{children}</h2>
+  }
+}
+
+export const RenderHeading3 = ({ children, className }) => {
+  if (className !== 'heading' && className !== 'subheading') {
+    return <h2 className="gra-doc-h3">{children}</h2>
   } else {
     return <h2 className={className}>{children}</h2>
   }
