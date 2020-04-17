@@ -50,66 +50,45 @@ export const RenderPre = args => {
 export const RenderAnchor = ({ href, title, children }) => {
   const titleToLowercase = title ? title.toLowerCase() : ''
 
-  console.log(titleToLowercase)
+  const linkInsideOrOutside = nameOfClass => {
+    if (!href || href.startsWith('http')) {
+      return (
+        <a href={href} className={nameOfClass} title={title}>
+          {children}
+        </a>
+      )
+    } else {
+      return (
+        <Link to={href} className={nameOfClass} title={title}>
+          {children}
+        </Link>
+      )
+    }
+  }
 
   if (
     (title !== null && titleToLowercase.includes('button')) ||
     titleToLowercase.includes('buton')
   ) {
-    if (!href || href.startsWith('http')) {
-      return (
-        <a href={href} className="btn" title={title}>
-          {children}
-        </a>
-      )
-    }
-    return (
-      <a className="btn" href={href} title={title}>
-        {children}
-      </a>
-    )
+    return linkInsideOrOutside('btn')
   } else if (
-    (title !== null && titleToLowercase.includes('daha')) ||
-    titleToLowercase.includes('more')
+    (title !== null && titleToLowercase.includes('more')) ||
+    titleToLowercase.includes('daha')
   ) {
-    return (
-      <Link className="btn btn-outline" to={href} title={title}>
-        {children}
-      </Link>
-    )
+    return linkInsideOrOutside('btn btn-outline')
   } else if (
     title !== null &&
     titleToLowercase.includes('breadcrumblinkcurrent')
   ) {
-    return (
-      <Link className="breadcrumb-link current" to={href} title={title}>
-        {children}
-      </Link>
-    )
+    return linkInsideOrOutside('breadcrumb-link current')
   } else if (title !== null && titleToLowercase.includes('breadcrumblink')) {
-    return (
-      <Link className="breadcrumb-link" to={href} title={title}>
-        {children}
-      </Link>
-    )
-  } else if (title !== null && titleToLowercase.includes('navlinkcurrent')) {
-    return (
-      <Link className="nav-link current" to={href} title={title}>
-        {children}
-      </Link>
-    )
+    return linkInsideOrOutside('breadcrumb-link')
   } else if (title !== null && titleToLowercase.includes('navbarlogolink')) {
-    return (
-      <Link className="navbar-logo-link" to={href} title={title}>
-        {children}
-      </Link>
-    )
+    return linkInsideOrOutside('navbar-logo-link')
+  } else if (title !== null && titleToLowercase.includes('navlinkcurrent')) {
+    return linkInsideOrOutside('nav-link current')
   } else if (title !== null && titleToLowercase.includes('navlink')) {
-    return (
-      <Link className="nav-link" to={href} title={title}>
-        {children}
-      </Link>
-    )
+    return linkInsideOrOutside('nav-link')
   } else {
     if (!href || href.startsWith('http')) {
       return (
