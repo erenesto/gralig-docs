@@ -41,7 +41,7 @@ A simple component to use for breadcrumb.
       <a href="#" class="breadcrumb-link">Home</a>
     </li>
     <li class="breadcrumb-item">
-      <a href="#" class="breadcrumb-link" disabled tabindex="-1">About</a>
+      <a href="#" class="breadcrumb-link">About</a>
     </li>
     <li class="breadcrumb-item">
       <a href="#" class="breadcrumb-link">Contact</a>

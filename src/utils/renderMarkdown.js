@@ -1,12 +1,25 @@
 import _get from 'lodash.get'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby-plugin-intl'
 
 import CodeHighlighter from '../components/code-highlighter'
+import GraModal from '../components/gra-modal'
 
-// export const RenderParagraph = ({ children }) => {
-//   return <p className="gra-doc-p">{children}</p>
-// }
+export const RenderParagraph = ({ children }) => {
+  if (
+    children[0].props &&
+    children[0].props.href &&
+    children[0].props.href.includes('#')
+  )
+    return <div>{children}</div>
+
+  return <p>{children}</p>
+}
+
+export const RenderTable = ({ children }) => {
+  console.log(children)
+  return <table>hop</table>
+}
 
 export const RenderHeading2 = ({ children, className }) => {
   if (className !== 'heading' && className !== 'subheading') {
@@ -57,6 +70,23 @@ export const RenderPre = args => {
 
 export const RenderAnchor = ({ href, title, children }) => {
   const titleToLowercase = title ? title.toLowerCase() : ''
+  const [toggleModal, setToggleModal] = useState(false)
+
+  // function unwrap(node) {
+  //   node.replaceWith(...node.childNodes)
+  // }
+
+  // useBeforeFirstRender(() => {
+  //   console.log('Do stuff here')
+  // if (linkForUnwrap.current !== null) {
+  //   unwrap(linkForUnwrap.current)
+  // }
+  //   unwrap(linkForUnwrap)
+  // })
+
+  function modalToggle() {
+    setToggleModal(prev => !prev)
+  }
 
   const linkInsideOrOutside = nameOfClass => {
     if (!href || href.startsWith('http')) {
@@ -64,6 +94,23 @@ export const RenderAnchor = ({ href, title, children }) => {
         <a href={href} className={nameOfClass} title={title}>
           {children}
         </a>
+      )
+    }
+    if (href.includes('#')) {
+      return (
+        <>
+          <Link
+            to={href}
+            onClick={modalToggle}
+            className={nameOfClass}
+            title={title}
+          >
+            {children}
+          </Link>
+          {href.includes('modal') && (
+            <GraModal show={toggleModal} modalToggle={modalToggle} />
+          )}
+        </>
       )
     } else {
       return (
@@ -99,17 +146,9 @@ export const RenderAnchor = ({ href, title, children }) => {
     return linkInsideOrOutside('nav-link')
   } else {
     if (!href || href.startsWith('http')) {
-      return (
-        <a href={href} title={title}>
-          {children}
-        </a>
-      )
+      return <a href={href}>{children}</a>
     } else {
-      return (
-        <Link to={href} title={title}>
-          {children}
-        </Link>
-      )
+      return <Link to={href}>{children}</Link>
     }
   }
 }

@@ -7,9 +7,9 @@ import rehypeSanitize from 'rehype-sanitize'
 import rehypeReact from 'rehype-react'
 import unified from 'unified'
 import stringify from 'rehype-stringify'
-import format from 'rehype-format'
 import gh from 'hast-util-sanitize/lib/github'
 import merge from 'deepmerge'
+import format from 'rehype-format'
 
 import {
   RenderCode,
@@ -17,6 +17,7 @@ import {
   RenderHeading2,
   RenderHeading3,
   RenderAnchor,
+  RenderParagraph,
 } from '../utils/renderMarkdown'
 
 const Markdown = ({ markdown, mdtype }) => {
@@ -34,6 +35,9 @@ const Markdown = ({ markdown, mdtype }) => {
         'cy',
         'r',
         'style',
+        'aria-labelledby',
+        'role',
+        'ref',
       ],
       li: ['className', 'class'],
       input: {
@@ -65,11 +69,11 @@ const Markdown = ({ markdown, mdtype }) => {
   const renderMDHTML = useMemo(
     () =>
       unified()
-        .use(remarkParse)
+        .use(remarkParse, { commonmark: true })
         .use(remark2rehype, { allowDangerousHtml: true })
         .use(rehypeRaw)
-        .use(format)
         .use(stringify)
+        .use(format)
         .use(rehypeSanitize, sanitizeSchema)
         .use(rehypeReact, {
           createElement: React.createElement,
@@ -79,6 +83,7 @@ const Markdown = ({ markdown, mdtype }) => {
             h2: RenderHeading2,
             h3: RenderHeading3,
             a: RenderAnchor,
+            p: RenderParagraph,
           },
         })
         .processSync(markdown).result,

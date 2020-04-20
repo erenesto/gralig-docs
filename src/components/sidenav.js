@@ -1,12 +1,19 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from 'react'
-import { useContext } from 'react'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import React, { useContext, useRef, useEffect } from 'react'
+import { useIntl } from 'gatsby-plugin-intl'
+import SideNavItem from './sidenav-item'
 import NavMenuContext from '../context/navMenuContext'
+import SideNavScrollContext from '../context/SideNavScrollContext'
 
 const SideNav = () => {
   const { isActive, toggleMenu } = useContext(NavMenuContext)
+  const { getListRef } = useContext(SideNavScrollContext)
   const intl = useIntl()
+  let listRef = useRef(null)
+
+  useEffect(() => {
+    getListRef(listRef)
+  }, [])
 
   const sidenavLinks = {
     group1: [
@@ -125,15 +132,11 @@ const SideNav = () => {
         sideNavRender.push(
           <span className="gra-sidenav-group" key={group}>
             {sidenavLinks[group].map(link => (
-              <li className="gra-sidenav-item" key={link.name}>
-                <Link
-                  to={`/docs`}
-                  activeClassName="gra-sidenav-active-link"
-                  className="gra-sidenav-item-link"
-                >
-                  {link.name}
-                </Link>
-              </li>
+              <SideNavItem
+                key={link.name}
+                name={link.name}
+                linkTo={link.goTo}
+              />
             ))}
           </span>
         )
@@ -141,15 +144,11 @@ const SideNav = () => {
         sideNavRender.push(
           <span className="gra-sidenav-group" key={group}>
             {sidenavLinks[group].map(link => (
-              <li className="gra-sidenav-item" key={link.name}>
-                <Link
-                  to={`/docs/${link.goTo}`}
-                  activeClassName="gra-sidenav-active-link"
-                  className="gra-sidenav-item-link"
-                >
-                  {link.name}
-                </Link>
-              </li>
+              <SideNavItem
+                key={link.name}
+                name={link.name}
+                linkTo={link.goTo}
+              />
             ))}
           </span>
         )
@@ -157,15 +156,11 @@ const SideNav = () => {
         sideNavRender.push(
           <span className="gra-sidenav-group" key={group}>
             {sidenavLinks[group].map(link => (
-              <li className="gra-sidenav-item" key={link.name}>
-                <Link
-                  to={`/docs/${link.goTo}`}
-                  activeClassName="gra-sidenav-active-link"
-                  className="gra-sidenav-item-link"
-                >
-                  {link.name}
-                </Link>
-              </li>
+              <SideNavItem
+                key={link.name}
+                name={link.name}
+                linkTo={link.goTo}
+              />
             ))}
           </span>
         )
@@ -184,7 +179,7 @@ const SideNav = () => {
           onClick={toggleMenu}
         ></span>
       )}
-      <nav className={`gra-sidenav ${isActive ? 'active' : ''}`}>
+      <nav className={`gra-sidenav ${isActive ? 'active' : ''}`} ref={listRef}>
         <ul className="gra-sidenav-list">{createNavGroups()}</ul>
       </nav>
     </>

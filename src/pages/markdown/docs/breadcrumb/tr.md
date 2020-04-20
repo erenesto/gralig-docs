@@ -41,7 +41,7 @@ Gezinti menüsü için kullanabileceğiniz basit komponent.
       <a href="#" class="breadcrumb-link">Ana Sayfa</a>
     </li>
     <li class="breadcrumb-item">
-      <a href="#" class="breadcrumb-link" disabled tabindex="-1">Hakkımızda</a>
+      <a href="#" class="breadcrumb-link">Hakkımızda</a>
     </li>
     <li class="breadcrumb-item">
       <a href="#" class="breadcrumb-link">İletişim</a>

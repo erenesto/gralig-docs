@@ -36,7 +36,7 @@ We created 5 separate card components in simple and different views. The width o
 </div>
 ```
 
-## Görsel İçeren Dikey Kartlar
+## Vertical Cards with Image
 
 When you are using vertical cards with images, you can use `.card-img-top` in addition to the` .card` class if you want the image on top or `.card-img-bottom` if you want the image on bottom.
 
@@ -118,9 +118,9 @@ When you are using vertical cards with images, you can use `.card-img-top` in ad
   </div>
 ```
 
-## Görsel İçeren Yatay Kartlar
+## Horizontal Cards with Image
 
-When you are using vertical cards with images, primarly you should use `.card-horizontal` in addition to the` .card`. And also if you want the image on left use the `.card-img-left` and if you want the image on left use the `.card-img-right`
+When you are using horizontal cards with images, primarly you should use `.card-horizontal` in addition to the` .card`. And also if you want the image on left use the `.card-img-left` and if you want the image on right use the `.card-img-right`
 
 <div class="gra-s-wrapper">
   <div class="card card-horizontal card-img-left">

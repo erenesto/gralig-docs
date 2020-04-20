@@ -4,7 +4,7 @@ mdtype: 'MDHTML'
 section: 'progress'
 ---
 
-We created 2 different types of progress components in bar and circle view. You can use it in `.small`, normal and` .large` sizes.
+We created 2 different types of progress components in bar and circle view. You can use it in `.small`, normal and `.large` sizes.
 
 
 ## Progress Bar

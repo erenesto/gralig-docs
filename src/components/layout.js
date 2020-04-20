@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import Header from './header'
-import SideNav from './side-nav'
+import SideNav from './sidenav'
 import ThemeContext from '../context/ThemeContext'
 
 const Layout = ({ children }) => {

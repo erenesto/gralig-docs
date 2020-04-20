@@ -6,6 +6,10 @@
   transition: background-color 0.3s ease-in;
 }
 
+a {
+  font-weight: 300;
+}
+
 .gra-doc-h1,
 .gra-doc-sub-h1 {
   font-size: 3.4rem;
@@ -392,6 +396,7 @@
   }
 
   &-section-nav,
+  &-section-navbar,
   &-section-breadcrumb {
     p {
       margin-bottom: 0;
@@ -429,6 +434,12 @@
       }
     }
   }
+}
+
+.modal-wrapper.open {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .form-group {
