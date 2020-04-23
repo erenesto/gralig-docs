@@ -9,6 +9,7 @@
   },
   "sidenavLinks": {
     "docs": { "name": "Introduction" },
+    "colors": { "name": "Colors" },
     "grid": { "name": "Grid" },
     "dark": { "name": "Dark Mode" },
     "vars": { "name": "Variables" },

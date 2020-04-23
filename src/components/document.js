@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { getResolvedVersionForLanguage } from '../utils/node'
 import Markdown from '../components/markdown'
+import DocsLayout from './docs-layout'
 
 function Document({ currentLanguage, current, location }) {
   const { lang: fallbackLang, versions } = current
@@ -13,7 +14,7 @@ function Document({ currentLanguage, current, location }) {
     [versions, currentLanguage, fallbackLang]
   )
   return (
-    <Layout location={location}>
+    <DocsLayout location={location} layout={current.layout}>
       <SEO title={fields.title} />
       <section className={`gra-section-${fields.section}`}>
         <h1 className="gra-doc-h1">{fields.title}</h1>
@@ -23,7 +24,7 @@ function Document({ currentLanguage, current, location }) {
           section={fields.section}
         />
       </section>
-    </Layout>
+    </DocsLayout>
   )
 }
 

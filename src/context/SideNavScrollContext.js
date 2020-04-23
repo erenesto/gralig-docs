@@ -2,48 +2,35 @@ import React, { createContext } from 'react'
 import { useState, useEffect } from 'react'
 
 const initialState = {
-  itemOffset: '',
-  listHeight: '',
-  scrollDistance: '',
-  getListRef: () => {},
+  activeLink: null,
+  setActiveLink: () => {},
   getActiveItem: () => {},
 }
-
 const SideNavScrollContext = createContext(initialState)
 
 const SideNavScrollProvider = props => {
-  const [scrollUnit, setScrollUnit] = useState(null)
-  const [list, setList] = useState(null)
-  const [itemOffset, setItemOffset] = useState(null)
-  const [position, setPosition] = useState(null)
+  const [activeLink, setActiveLink] = useState(null)
 
   useEffect(() => {
-    setPosition(Math.floor(itemOffset / scrollUnit))
-  }, [itemOffset, scrollUnit])
-
-  useEffect(() => {
-    if (list && position) {
-      setScrollPosition()
+    if (activeLink) {
+      calculateScrollAlignPosition(activeLink)
     }
-  }, [list, position])
+  }, [activeLink])
 
-  function getListRef(listRef) {
-    setList(listRef)
-    const distance = listRef.current.scrollHeight - listRef.current.offsetHeight
-    const findScrollUnit = listRef.current.scrollHeight / distance
-    setScrollUnit(findScrollUnit)
-  }
-  function getActiveItem(itemRef) {
-    setItemOffset(itemRef.current.offsetTop)
+  function getActiveItem(link) {
+    setActiveLink(link)
   }
 
-  function setScrollPosition() {
-    list.current.scrollTop = position
+  function calculateScrollAlignPosition(link) {
+    link.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+    })
   }
 
   return (
     <SideNavScrollContext.Provider
-      value={{ getListRef, getActiveItem }}
+      value={{ getActiveItem, activeLink, setActiveLink }}
       {...props}
     />
   )

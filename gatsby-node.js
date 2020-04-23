@@ -47,7 +47,6 @@
 //   })
 // }
 
-const { createFilePath } = require('gatsby-source-filesystem')
 const fs = require('fs')
 const path = require('path')
 const grayMatter = require('gray-matter')
@@ -98,6 +97,7 @@ const _createMarkdownPages = ({ pages, getNode, createPage }, cb) => {
       createPage({
         path: pagePath,
         component: DOCS_TEMPLATE,
+        layout: 'docs',
         context: {
           relativePath,
           ...(cb ? cb(index, node) : null),
@@ -121,6 +121,7 @@ exports.onCreateNode = ({ node, actions, getNodes }) => {
       type: pageType,
       path: _generatePagePath({ pageType, pageId }),
       lang,
+      layout: 'docs',
       versions: [],
     }
 

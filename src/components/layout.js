@@ -1,26 +1,46 @@
 import React from 'react'
 import { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
 import Header from './header'
 import SideNav from './sidenav'
 import ThemeContext from '../context/ThemeContext'
+import HomeLayout from './home-layout'
 
-const Layout = ({ children }) => {
+export const query = graphql`
+  {
+    allFile {
+      nodes {
+        fields {
+          page {
+            layout
+          }
+        }
+      }
+    }
+  }
+`
+
+const Layout = ({ children, data }) => {
   const { isDark } = useContext(ThemeContext)
 
-  return (
-    <div className={`${isDark ? 'dark' : ''} gra-wrapper`}>
-      <Header />
-      <div className="gra-main">
-        <SideNav />
-        <main className="gra-content-wrapper">
-          <div className="gra-content">{children}</div>
-          <footer className="footer">© 2019, Built with ❤️&amp; Gralig</footer>
-        </main>
-      </div>
-    </div>
-  )
+  const renderLayout = () => {
+    if (data && data.current.fields.page.layout === 'docs') {
+      return (
+        <div className={`${isDark ? 'dark' : ''} gra-wrapper`}>
+          <Header />
+          <div className="gra-main">
+            <SideNav />
+            <main className="gra-content-wrapper">{children}</main>
+          </div>
+        </div>
+      )
+    }
+    return <HomeLayout>{children}</HomeLayout>
+  }
+
+  return renderLayout()
 }
 
 Layout.propTypes = {

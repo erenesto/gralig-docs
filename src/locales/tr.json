@@ -9,6 +9,7 @@
   },
   "sidenavLinks": {
     "docs": { "name": "Giriş" },
+    "colors": { "name": "Renkler" },
     "grid": { "name": "Izgara(Grid)" },
     "dark": { "name": "Karanlık Mod" },
     "vars": { "name": "Değişkenler" },

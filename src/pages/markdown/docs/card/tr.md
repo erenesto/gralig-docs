@@ -38,11 +38,11 @@ Basit ve farklı görünümlerde 5 ayrı kart komponenti oluşturuldu. Kartları
 
 ## Görsel İçeren Dikey Kartlar
 
-Görsel içeren dikey kartları kullanırken görselin üstte olmasını isterseniz `.card` classına ek olarak `.card-img-top`, altta olmasını isterseniz `.card-img-bottom` kullanabilirsiniz.
+Görsel içeren dikey kartları kullanırken görselin üstte olmasını isterseniz `.card` classına ek olarak `.card-media-top`, altta olmasını isterseniz `.card-media-bottom` kullanabilirsiniz.
 
 <div class="gra-s-wrapper">
-  <div class="card card-img-top">
-    <figure class="card-img-wrapper">
+  <div class="card card-media-top">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/wb8kzewydi4y9n9uaidz.jpg" alt="Kart Test Görsel" />
     </figure>
     <div class="card-content">
@@ -61,8 +61,8 @@ Görsel içeren dikey kartları kullanırken görselin üstte olmasını isterse
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-img-top">
-      <figure class="card-img-wrapper">
+    <div class="card card-media-top">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Kart Test Görsel" />
       </figure>
       <div class="card-content">
@@ -80,8 +80,8 @@ Görsel içeren dikey kartları kullanırken görselin üstte olmasını isterse
 ```
 
 <div class="gra-s-wrapper">
-  <div class="card card-img-bottom">
-    <figure class="card-img-wrapper">
+  <div class="card card-media-bottom">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/wb8kzewydi4y9n9uaidz.jpg" alt="Kart Test Görsel" />
     </figure>
     <div class="card-content">
@@ -100,8 +100,8 @@ Görsel içeren dikey kartları kullanırken görselin üstte olmasını isterse
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-img-bottom">
-      <figure class="card-img-wrapper">
+    <div class="card card-media-bottom">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Kart Test Görsel" />
       </figure>
       <div class="card-content">
@@ -120,11 +120,11 @@ Görsel içeren dikey kartları kullanırken görselin üstte olmasını isterse
 
 ## Görsel İçeren Yatay Kartlar
 
-Görsel içeren yatay kartları kullanırken öncelikle `.card` classına ek olarak `.card-horizontal` classını eklemelisiniz. Bunun yanında görselin solda olmasını isterseniz `.card-img-left` , sağda olmasını isterseniz `.card-img-right` kullanabilirsiniz.
+Görsel içeren yatay kartları kullanırken öncelikle `.card` classına ek olarak `.card-horizontal` classını eklemelisiniz. Bunun yanında görselin solda olmasını isterseniz `.card-media-left` , sağda olmasını isterseniz `.card-media-right` kullanabilirsiniz.
 
 <div class="gra-s-wrapper">
-  <div class="card card-horizontal card-img-left">
-    <figure class="card-img-wrapper">
+  <div class="card card-horizontal card-media-left">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/e16fm6knahyvtlnjmhf3.jpg" alt="Kart Test Görsel" />
     </figure>
     <div class="card-content">
@@ -143,8 +143,8 @@ Görsel içeren yatay kartları kullanırken öncelikle `.card` classına ek ola
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-horizontal card-img-left">
-      <figure class="card-img-wrapper">
+    <div class="card card-horizontal card-media-left">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Kart Test Görsel" />
       </figure>
       <div class="card-content">
@@ -162,8 +162,8 @@ Görsel içeren yatay kartları kullanırken öncelikle `.card` classına ek ola
 ```
 
 <div class="gra-s-wrapper">
-  <div class="card card-horizontal card-img-right">
-    <figure class="card-img-wrapper">
+  <div class="card card-horizontal card-media-right">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/e16fm6knahyvtlnjmhf3.jpg" alt="Kart Test Görsel" />
     </figure>
     <div class="card-content">
@@ -182,8 +182,8 @@ Görsel içeren yatay kartları kullanırken öncelikle `.card` classına ek ola
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-horizontal card-img-right">
-      <figure class="card-img-wrapper">
+    <div class="card card-horizontal card-media-right">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Kart Test Görsel" />
       </figure>
       <div class="card-content">

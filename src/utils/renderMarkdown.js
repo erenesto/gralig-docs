@@ -31,9 +31,9 @@ export const RenderHeading2 = ({ children, className }) => {
 
 export const RenderHeading3 = ({ children, className }) => {
   if (className !== 'heading' && className !== 'subheading') {
-    return <h2 className="gra-doc-h3">{children}</h2>
+    return <h3 className="gra-doc-h3">{children}</h3>
   } else {
-    return <h2 className={className}>{children}</h2>
+    return <h3 className={className}>{children}</h3>
   }
 }
 

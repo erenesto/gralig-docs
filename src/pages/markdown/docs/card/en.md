@@ -38,11 +38,11 @@ We created 5 separate card components in simple and different views. The width o
 
 ## Vertical Cards with Image
 
-When you are using vertical cards with images, you can use `.card-img-top` in addition to the` .card` class if you want the image on top or `.card-img-bottom` if you want the image on bottom.
+When you are using vertical cards with images, you can use `.card-media-top` in addition to the` .card` class if you want the image on top or `.card-media-bottom` if you want the image on bottom.
 
 <div class="gra-s-wrapper">
-  <div class="card card-img-top">
-    <figure class="card-img-wrapper">
+  <div class="card card-media-top">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/wb8kzewydi4y9n9uaidz.jpg" alt="Card Test Image" />
     </figure>
     <div class="card-content">
@@ -61,8 +61,8 @@ When you are using vertical cards with images, you can use `.card-img-top` in ad
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-img-top">
-      <figure class="card-img-wrapper">
+    <div class="card card-media-top">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Card Test Image" />
       </figure>
       <div class="card-content">
@@ -80,8 +80,8 @@ When you are using vertical cards with images, you can use `.card-img-top` in ad
 ```
 
 <div class="gra-s-wrapper">
-  <div class="card card-img-bottom">
-    <figure class="card-img-wrapper">
+  <div class="card card-media-bottom">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/wb8kzewydi4y9n9uaidz.jpg" alt="Card Test Image" />
     </figure>
     <div class="card-content">
@@ -100,8 +100,8 @@ When you are using vertical cards with images, you can use `.card-img-top` in ad
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-img-bottom">
-      <figure class="card-img-wrapper">
+    <div class="card card-media-bottom">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Card Test Image" />
       </figure>
       <div class="card-content">
@@ -120,11 +120,11 @@ When you are using vertical cards with images, you can use `.card-img-top` in ad
 
 ## Horizontal Cards with Image
 
-When you are using horizontal cards with images, primarly you should use `.card-horizontal` in addition to the` .card`. And also if you want the image on left use the `.card-img-left` and if you want the image on right use the `.card-img-right`
+When you are using horizontal cards with images, primarly you should use `.card-horizontal` in addition to the` .card`. And also if you want the image on left use the `.card-media-left` and if you want the image on right use the `.card-media-right`
 
 <div class="gra-s-wrapper">
-  <div class="card card-horizontal card-img-left">
-    <figure class="card-img-wrapper">
+  <div class="card card-horizontal card-media-left">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/e16fm6knahyvtlnjmhf3.jpg" alt="Card Test Image" />
     </figure>
     <div class="card-content">
@@ -143,8 +143,8 @@ When you are using horizontal cards with images, primarly you should use `.card-
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-horizontal card-img-left">
-      <figure class="card-img-wrapper">
+    <div class="card card-horizontal card-media-left">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Card Test Image" />
       </figure>
       <div class="card-content">
@@ -162,8 +162,8 @@ When you are using horizontal cards with images, primarly you should use `.card-
 ```
 
 <div class="gra-s-wrapper">
-  <div class="card card-horizontal card-img-right">
-    <figure class="card-img-wrapper">
+  <div class="card card-horizontal card-media-right">
+    <figure class="card-media-wrapper">
       <img class="img-object-fit" src="https://res.cloudinary.com/erenesto/image/upload/v1587131749/e16fm6knahyvtlnjmhf3.jpg" alt="Card Test Image" />
     </figure>
     <div class="card-content">
@@ -182,8 +182,8 @@ When you are using horizontal cards with images, primarly you should use `.card-
 
 ```html
   <div class="gra-s-wrapper">
-    <div class="card card-horizontal card-img-right">
-      <figure class="card-img-wrapper">
+    <div class="card card-horizontal card-media-right">
+      <figure class="card-media-wrapper">
         <img class="img-object-fit" src="test-image.jpg" alt="Card Test Image" />
       </figure>
       <div class="card-content">

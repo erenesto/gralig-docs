@@ -1,19 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useContext, useRef, useEffect } from 'react'
+import React, { useContext, useRef, useEffect, useState } from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import SideNavItem from './sidenav-item'
 import NavMenuContext from '../context/navMenuContext'
-import SideNavScrollContext from '../context/SideNavScrollContext'
 
 const SideNav = () => {
   const { isActive, toggleMenu } = useContext(NavMenuContext)
-  const { getListRef } = useContext(SideNavScrollContext)
   const intl = useIntl()
-  let listRef = useRef(null)
-
-  useEffect(() => {
-    getListRef(listRef)
-  }, [])
 
   const sidenavLinks = {
     group1: [
@@ -23,6 +16,10 @@ const SideNav = () => {
       },
     ],
     group2: [
+      {
+        goTo: 'colors',
+        name: intl.formatMessage({ id: 'sidenavLinks.colors.name' }),
+      },
       {
         goTo: 'grid',
         name: intl.formatMessage({ id: 'sidenavLinks.grid.name' }),
@@ -179,7 +176,7 @@ const SideNav = () => {
           onClick={toggleMenu}
         ></span>
       )}
-      <nav className={`gra-sidenav ${isActive ? 'active' : ''}`} ref={listRef}>
+      <nav className={`gra-sidenav ${isActive ? 'active' : ''}`}>
         <ul className="gra-sidenav-list">{createNavGroups()}</ul>
       </nav>
     </>

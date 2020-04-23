@@ -3,7 +3,7 @@
 @import 'gralig/scss/themes/themes.scss';
 
 * {
-  transition: background-color 0.3s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 a {
@@ -197,7 +197,6 @@ a {
 
   &-sidenav {
     border-right: 1px solid $color-border;
-    background-color: $color-background;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -208,10 +207,8 @@ a {
     transition: transform 0.2s ease-in;
     z-index: 99;
     overflow-y: auto;
-    padding-bottom: $space-xl;
     @include themify($themes) {
       border-color: themed('colorBorder');
-      background-color: themed('colorBackground');
     }
 
     @include min-width($breakpoint-s) {
@@ -227,12 +224,14 @@ a {
     }
 
     &-list {
+      display: inline-table;
       padding-left: 0;
       padding-right: 0;
       width: 100%;
+      height: auto;
       background-color: $color-background;
-      height: calc(100vh + 7rem);
       z-index: 10;
+      padding-bottom: $space;
       @include themify($themes) {
         background-color: themed('colorBackground');
       }
@@ -296,6 +295,10 @@ a {
         }
       }
       &.gra-sidenav-active-link {
+        color: #a8aeb3;
+        @include themify($themes) {
+          color: themed('colorLinkHover');
+        }
         &::after {
           height: 60%;
           opacity: 1;
@@ -434,6 +437,14 @@ a {
       }
     }
   }
+  &-section-colors {
+    .card {
+      p {
+        font-family: Consolas, Menlo, Courier, monospace;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
 
 .modal-wrapper.open {
@@ -444,4 +455,205 @@ a {
 
 .form-group {
   margin-bottom: 24px;
+}
+
+.colors-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-box {
+  width: 100%;
+  height: 100%;
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+  &.blackpearl-bg,
+  &.woodsmoke-bg,
+  &.shark-bg {
+    @include themify($themes) {
+      border: 1px dotted themed('colorBorder');
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+  }
+}
+
+// will be deleted
+.card {
+  display: flex;
+  width: 100%;
+  min-width: 5rem;
+  flex-direction: column;
+  margin-bottom: $space;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  @include themify($themes) {
+    background-color: themed('colorCardBg');
+    border-color: themed('cardOutlineBorder');
+  }
+  &.card-horizontal {
+    flex-direction: row;
+  }
+  &-title {
+    border-bottom: 1px solid $color-border;
+    font-weight: $font-bold;
+    line-height: 1;
+    padding-block: $content-padding-block;
+    padding-inline: $content-padding-inline;
+    @include themify($themes) {
+      border-color: themed('colorBorder');
+    }
+  }
+  &-media-wrapper {
+    overflow: hidden;
+    flex: 1;
+    margin-top: -1px;
+    margin-right: -1px;
+    margin-left: -1px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    * {
+      display: block;
+    }
+  }
+  &-media-bottom {
+    .card-media-wrapper {
+      margin-top: 0;
+      margin-bottom: -1px;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &.card {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-media-left {
+    .card-media-wrapper {
+      margin-right: 0;
+      margin-bottom: -1px;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: 0;
+    }
+  }
+  &-media-right {
+    .card-media-wrapper {
+      margin-bottom: -1px;
+      margin-left: 0;
+      border-bottom-right-radius: $border-radius;
+      border-top-left-radius: 0;
+      border-top-right-radius: $border-radius;
+    }
+    &.card {
+      flex-direction: row-reverse;
+    }
+  }
+  &-content {
+    flex: 1;
+  }
+  &-body {
+    padding-block: $content-padding-block;
+    padding-inline: $content-padding-inline;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+//
+
+.blackpearl-bg {
+  background-color: $blackpearl;
+}
+.woodsmoke-bg {
+  background-color: $woodsmoke;
+}
+.shark-bg {
+  background-color: $shark;
+}
+.abbey-bg {
+  background-color: $abbey;
+}
+.raven-bg {
+  background-color: $raven;
+}
+.oslo-bg {
+  background-color: $oslo;
+}
+.mischka-bg {
+  background-color: $mischka;
+}
+.ghost-bg {
+  background-color: $ghost;
+}
+.iron-bg {
+  background-color: $iron;
+}
+.porcelain-bg {
+  background-color: $porcelain;
+}
+.summer-lighter-bg {
+  background-color: $summer-lighter;
+}
+.summer-light-bg {
+  background-color: $summer-light;
+}
+.summer-bg {
+  background-color: $summer;
+}
+.summer-dark-bg {
+  background-color: $summer-dark;
+}
+.summer-darker-bg {
+  background-color: $summer-darker;
+}
+.shamrock-lighter-bg {
+  background-color: $shamrock-lighter;
+}
+.shamrock-light-bg {
+  background-color: $shamrock-light;
+}
+.shamrock-bg {
+  background-color: $shamrock;
+}
+.shamrock-dark-bg {
+  background-color: $shamrock-dark;
+}
+.shamrock-darker-bg {
+  background-color: $shamrock-darker;
+}
+.tulip-lighter-bg {
+  background-color: $tulip-lighter;
+}
+.tulip-light-bg {
+  background-color: $tulip-light;
+}
+.tulip-bg {
+  background-color: $tulip;
+}
+.tulip-dark-bg {
+  background-color: $tulip-dark;
+}
+.tulip-darker-bg {
+  background-color: $tulip-darker;
+}
+.flame-lighter-bg {
+  background-color: $flame-lighter;
+}
+.flame-light-bg {
+  background-color: $flame-light;
+}
+.flame-bg {
+  background-color: $flame;
+}
+.flame-dark-bg {
+  background-color: $flame-dark;
+}
+.flame-darker-bg {
+  background-color: $flame-darker;
 }

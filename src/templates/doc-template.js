@@ -10,6 +10,7 @@ export const query = graphql`
         path
         type
         lang
+        layout
         versions {
           lang
           title

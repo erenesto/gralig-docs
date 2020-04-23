@@ -15,9 +15,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-layout`,
       options: {
-        plugins: [`gatsby-remark-component`],
+        component: require.resolve(`${__dirname}/src/components/layout.js`),
       },
     },
     {

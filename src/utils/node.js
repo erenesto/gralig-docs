@@ -13,6 +13,7 @@ export const getResolvedVersionForLanguage = (versions, lang, fallbackLang) => {
     'mdtype',
     'description',
     'section',
+    'layout',
   ].reduce((m, f) => {
     m[f] = safeGet(current, f, fallback[f])
     return m
