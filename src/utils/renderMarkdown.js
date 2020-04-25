@@ -1,7 +1,6 @@
 import _get from 'lodash.get'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby-plugin-intl'
-
 import CodeHighlighter from '../components/code-highlighter'
 import GraModal from '../components/gra-modal'
 
@@ -71,18 +70,6 @@ export const RenderPre = args => {
 export const RenderAnchor = ({ href, title, children }) => {
   const titleToLowercase = title ? title.toLowerCase() : ''
   const [toggleModal, setToggleModal] = useState(false)
-
-  // function unwrap(node) {
-  //   node.replaceWith(...node.childNodes)
-  // }
-
-  // useBeforeFirstRender(() => {
-  //   console.log('Do stuff here')
-  // if (linkForUnwrap.current !== null) {
-  //   unwrap(linkForUnwrap.current)
-  // }
-  //   unwrap(linkForUnwrap)
-  // })
 
   function modalToggle() {
     setToggleModal(prev => !prev)

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 

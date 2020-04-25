@@ -7,7 +7,7 @@ import Icons from '../images/icons/Icons'
 import ThemeContext from '../context/ThemeContext'
 import NavMenuContext from '../context/navMenuContext'
 import Language from './language'
-import { onKeyPressEnter } from '../utils/helpers'
+import { onSpecificKeyPress } from '../utils/helpers'
 
 const Header = () => {
   const { isDark, toggleTheme } = useContext(ThemeContext)
@@ -46,7 +46,7 @@ const Header = () => {
             <li>
               <span
                 className="nav-link"
-                onKeyDown={e => onKeyPressEnter(e, toggleTheme)}
+                onKeyDown={e => onSpecificKeyPress(e, 'Enter', toggleTheme)}
                 onClick={toggleTheme}
                 tabIndex={0}
                 role="button"

@@ -25,6 +25,8 @@ export const query = graphql`
 const Layout = ({ children, data }) => {
   const { isDark } = useContext(ThemeContext)
 
+  // console.log(data.current)
+
   const renderLayout = () => {
     if (data && data.current.fields.page.layout === 'docs') {
       return (

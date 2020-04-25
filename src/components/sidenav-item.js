@@ -13,7 +13,7 @@ const SideNavItem = ({ name, linkTo }) => {
     ) {
       getActiveItem(sidenavLink.current)
     }
-  }, [sidenavLink])
+  }, [sidenavLink, getActiveItem])
 
   const getActive = e => {
     setActiveLink(e.target)

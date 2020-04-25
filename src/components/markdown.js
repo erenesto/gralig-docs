@@ -87,7 +87,7 @@ const Markdown = ({ markdown, mdtype }) => {
           },
         })
         .processSync(markdown).result,
-    [markdown]
+    [markdown, sanitizeSchema]
   )
 
   return <div>{renderMDHTML}</div>

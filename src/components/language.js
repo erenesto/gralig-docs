@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl'
-import { onKeyPressEnter } from '../utils/helpers'
+import { onSpecificKeyPress } from '../utils/helpers'
 
 const languageName = {
   en: 'EN',
@@ -11,8 +11,8 @@ const Language = () => {
   const [language, setLanguage] = useState('')
 
   const onLangChange = (e, lang) => {
-    if (e.keyCode) {
-      onKeyPressEnter(e, changeLocale, lang)
+    if (e.keyCode !== undefined) {
+      onSpecificKeyPress(e, 'Enter', changeLocale, lang)
     } else {
       changeLocale(lang)
     }

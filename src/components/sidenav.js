@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useContext, useRef, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import SideNavItem from './sidenav-item'
 import NavMenuContext from '../context/navMenuContext'

@@ -80,7 +80,7 @@ a {
   }
 
   &-content {
-    max-width: 72rem;
+    max-width: 76rem;
     width: 100%;
     padding-left: $space-xl;
     padding-right: $space-xl;
@@ -656,4 +656,95 @@ a {
 }
 .flame-darker-bg {
   background-color: $flame-darker;
+}
+
+.gra-section-grid {
+  em {
+    font-size: 1.4rem;
+  }
+  @include min-width($breakpoint-xs) {
+    .col-test.span {
+      display: inline-block !important;
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      left: 0;
+      margin-left: 1.2rem;
+      border: 1px dashed hsl(204, 7%, 86%);
+      background-color: transparent;
+      color: hsl(207, 13%, 14%);
+      min-height: 3.6rem;
+      &.span90 {
+        width: calc(90% - 2.4rem);
+      }
+      &.span84 {
+        width: calc(83.33333333% - 2.4rem);
+      }
+      &.span80 {
+        width: calc(80% - 2.4rem);
+      }
+      &.span75 {
+        width: calc(75% - 2.4rem);
+      }
+      &.span70 {
+        width: calc(70% - 2.4rem);
+      }
+      &.span67 {
+        width: calc(66.66666666% - 2.4rem);
+      }
+      &.span60 {
+        width: calc(60% - 2.4rem);
+      }
+      &.span50 {
+        width: calc(50% - 2.4rem);
+      }
+      &.span40 {
+        width: calc(40% - 2.4rem);
+      }
+      &.span33 {
+        width: calc(33.33333333% - 2.4rem);
+      }
+      &.span30 {
+        width: calc(30% - 2.4rem);
+      }
+      &.span25 {
+        width: calc(25% - 2.4rem);
+      }
+      &.span20 {
+        width: calc(20% - 2.4rem);
+      }
+      &.span16 {
+        width: calc(16% - 2.4rem);
+      }
+      &.span10 {
+        width: calc(10% - 2.4rem);
+      }
+    }
+  }
+  .col-test.span {
+    display: none;
+  }
+  .row {
+    position: relative;
+  }
+
+  .col-test {
+    display: block;
+    padding: 8px;
+    border: 1px solid hsl(207, 7%, 68%);
+    background: hsl(207, 7%, 68%);
+    border-radius: 2px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.dark .example-grids {
+  .col-test {
+    background: hsl(207, 13%, 14%);
+  }
+  .col-test.span {
+    border-color: hsl(206, 7%, 40%);
+    color: hsl(204, 7%, 86%);
+  }
 }

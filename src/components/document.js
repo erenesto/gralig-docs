@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { getResolvedVersionForLanguage } from '../utils/node'
 import Markdown from '../components/markdown'
