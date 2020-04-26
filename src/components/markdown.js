@@ -10,6 +10,7 @@ import stringify from 'rehype-stringify'
 import gh from 'hast-util-sanitize/lib/github'
 import merge from 'deepmerge'
 import format from 'rehype-format'
+import minify from 'rehype-minify-whitespace'
 
 import {
   RenderCode,
@@ -69,11 +70,12 @@ const Markdown = ({ markdown, mdtype }) => {
   const renderMDHTML = useMemo(
     () =>
       unified()
-        .use(remarkParse, { commonmark: true })
+        .use(remarkParse)
         .use(remark2rehype, { allowDangerousHtml: true })
         .use(rehypeRaw)
         .use(stringify)
         .use(format)
+        .use(minify)
         .use(rehypeSanitize, sanitizeSchema)
         .use(rehypeReact, {
           createElement: React.createElement,

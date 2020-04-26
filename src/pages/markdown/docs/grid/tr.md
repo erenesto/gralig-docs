@@ -6,7 +6,7 @@ section: 'grid'
 
 Gralig flexbox tabanlı çok basit bir ızgara(grid) sistemi kullanır. `.row` kapsayıcısı içinde istediğiniz kadar `.col` kullanabilirsiniz, ancak aşağıdaki sütun boyutlarını kullanmanızı öneririz.
 
-_This col or span views below are for example to see. They will not show up in normal usage._
+_Aşağıdaki görünümler örnek olarak hazırlanmıştır ve normal kullanımda gözükmeyecektir._
 
 ## Sütunlar
 

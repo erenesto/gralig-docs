@@ -445,6 +445,21 @@ a {
       }
     }
   }
+  &-section-variables {
+    table td {
+      font-family: Consolas, Menlo, Courier, monospace;
+      font-size: 1.2rem;
+      &:first-child {
+        width: 34%;
+      }
+      &:nth-child(2) {
+        width: 20%;
+      }
+      em {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
 .modal-wrapper.open {
@@ -480,6 +495,18 @@ a {
 }
 
 // will be deleted
+.table.table-bordered {
+  td,
+  th {
+    border: 1px solid $color-border;
+    &:first-child {
+      padding-left: $space-m;
+    }
+    &:last-child {
+      padding-right: $space-m;
+    }
+  }
+}
 .card {
   display: flex;
   width: 100%;
@@ -575,6 +602,9 @@ a {
 }
 .shark-bg {
   background-color: $shark;
+}
+.smoke-bg {
+  background-color: $smoke;
 }
 .abbey-bg {
   background-color: $abbey;
