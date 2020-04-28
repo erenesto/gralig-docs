@@ -29,6 +29,7 @@ const Header = () => {
                 href="https://www.npmjs.com/package/gralig"
                 tabIndex={0}
                 role="button"
+                aria-label="Gralig Npm"
               >
                 <Icons name="npm" width={18} height={18} fill={'#d9dcde'} />
               </a>
@@ -39,6 +40,7 @@ const Header = () => {
                 href="https://github.com/erenesto/gralig"
                 tabIndex={0}
                 role="button"
+                aria-label="Gralig Github"
               >
                 <Icons name="github" width={18} height={18} fill={'#d9dcde'} />
               </a>
@@ -50,6 +52,7 @@ const Header = () => {
                 onClick={toggleTheme}
                 tabIndex={0}
                 role="button"
+                aria-label="Dark Mode Toggler"
               >
                 {!isDark ? (
                   <Icons name="moon" width={18} height={18} fill={'#d9dcde'} />
@@ -65,6 +68,7 @@ const Header = () => {
                 onKeyDown={toggleMenu}
                 role="button"
                 tabIndex={0}
+                aria-label="Mobile Menu Button"
               >
                 <span
                   className={`gra-menu-icon ${isActive ? 'open' : ''}`}

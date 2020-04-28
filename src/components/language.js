@@ -40,6 +40,7 @@ const Language = () => {
               tabIndex={0}
               onKeyPress={e => onLangChange(e, lang)}
               onClick={e => onLangChange(e, lang)}
+              aria-label={`${lang} Button`}
             >
               {languageName[lang]}
             </span>

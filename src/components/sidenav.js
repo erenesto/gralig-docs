@@ -14,42 +14,48 @@ const SideNav = ({ path }) => {
     for (const group in sidenavLinks) {
       if (group === 'group1') {
         sideNavRender.push(
-          <span className="gra-sidenav-group" key={group}>
-            {sidenavLinks[group].map(link => (
-              <SideNavItem
-                key={link.name}
-                name={link.name}
-                linkTo={link.goTo}
-                path={path}
-              />
-            ))}
-          </span>
+          <li className="gra-sidenav-group" key={group}>
+            <ul>
+              {sidenavLinks[group].map(link => (
+                <SideNavItem
+                  key={link.name}
+                  name={link.name}
+                  linkTo={link.goTo}
+                  path={path}
+                />
+              ))}
+            </ul>
+          </li>
         )
       } else if (group === 'group2') {
         sideNavRender.push(
-          <span className="gra-sidenav-group" key={group}>
-            {sidenavLinks[group].map(link => (
-              <SideNavItem
-                key={link.name}
-                name={link.name}
-                linkTo={link.goTo}
-                path={path}
-              />
-            ))}
-          </span>
+          <li className="gra-sidenav-group" key={group}>
+            <ul>
+              {sidenavLinks[group].map(link => (
+                <SideNavItem
+                  key={link.name}
+                  name={link.name}
+                  linkTo={link.goTo}
+                  path={path}
+                />
+              ))}
+            </ul>
+          </li>
         )
       } else if (group === 'group3') {
         sideNavRender.push(
-          <span className="gra-sidenav-group" key={group}>
-            {sidenavLinks[group].map(link => (
-              <SideNavItem
-                key={link.name}
-                name={link.name}
-                linkTo={link.goTo}
-                path={path}
-              />
-            ))}
-          </span>
+          <li className="gra-sidenav-group" key={group}>
+            <ul>
+              {sidenavLinks[group].map(link => (
+                <SideNavItem
+                  key={link.name}
+                  name={link.name}
+                  linkTo={link.goTo}
+                  path={path}
+                />
+              ))}
+            </ul>
+          </li>
         )
       }
     }
