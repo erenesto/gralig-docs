@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavMenuProvider } from './src/context/navMenuContext'
+import { NavMenuProvider } from './src/context/NavMenuContext'
 import { ThemeProvider } from './src/context/ThemeContext'
 import { SideNavScrollProvider } from './src/context/SideNavScrollContext'
 import 'gralig'

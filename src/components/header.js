@@ -5,7 +5,7 @@ import React, { useContext } from 'react'
 import logo from '../images/gralig-logo.svg'
 import Icons from '../images/icons/Icons'
 import ThemeContext from '../context/ThemeContext'
-import NavMenuContext from '../context/navMenuContext'
+import NavMenuContext from '../context/NavMenuContext'
 import Language from './language'
 import { onSpecificKeyPress } from '../utils/helpers'
 
