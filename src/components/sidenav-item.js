@@ -2,22 +2,18 @@ import React, { useEffect, useRef, useContext } from 'react'
 import { Link } from 'gatsby-plugin-intl'
 import SideNavScrollContext from '../context/SideNavScrollContext'
 
-const SideNavItem = ({ name, linkTo }) => {
+const SideNavItem = ({ name, linkTo, path }) => {
   const linkAddress = linkTo ? `/docs/${linkTo}` : '/docs'
-  const { getActiveItem, setActiveLink } = useContext(SideNavScrollContext)
+  const { setActiveLink } = useContext(SideNavScrollContext)
   let sidenavLink = useRef(null)
 
   useEffect(() => {
     if (
       sidenavLink.current.childNodes[0].classList.value.includes('active-link')
     ) {
-      getActiveItem(sidenavLink.current)
+      setActiveLink(sidenavLink.current.firstChild)
     }
-  }, [sidenavLink, getActiveItem])
-
-  const getActive = e => {
-    setActiveLink(e.target)
-  }
+  }, [sidenavLink, path, setActiveLink])
 
   return (
     <li className="gra-sidenav-item" ref={sidenavLink}>
@@ -25,7 +21,6 @@ const SideNavItem = ({ name, linkTo }) => {
         to={linkAddress}
         activeClassName="gra-sidenav-active-link"
         className="gra-sidenav-item-link"
-        onClick={e => getActive(e)}
       >
         {name}
       </Link>

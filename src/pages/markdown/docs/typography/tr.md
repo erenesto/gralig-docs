@@ -6,7 +6,23 @@ section: 'typography'
 
 Gralig yazı boyutu için `rem` birimini kullanır. `html` elementi varsayılan yazı boyutunun %62.5'i oranında değere sahiptir ve 10px yazı boyutunu 1rem değerine eşitler. Bu şekilde karmaşık rem-px hesaplaması yapmanıza gerek kalmaz. Ana yazı boyutu 1.6rem'dir ve 16px değerine eşittir.
 
-Yazı tipi olarak [Catamaran](https://fonts.google.com/specimen/Catamaran 'font') kullanıldı ancak kütüphane içerisine dahil edilmedi. Siz de bu yazı tipini ya da istediğiniz herhangi bir yazı tipini projenize dahil edip kullanabilirsiniz.
+Yazı tipi olarak [Catamaran](https://fonts.google.com/specimen/Catamaran 'font') kullanıldı ancak kütüphane içerisine dahil edilmedi.
+
+Siz de bu yazı tipini kullanmak isterseniz
+
+`html` içerisinde
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600&display=swap" rel="stylesheet">
+```
+
+`scss` içerisinde
+
+```scss
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600&display=swap')
+```
+
+şeklinde import edebilir ya da istediğiniz herhangi bir yazı tipini projenize dahil edip kullanabilirsiniz.
 
 ## Başlıklar ve Alt Başlıklar
 

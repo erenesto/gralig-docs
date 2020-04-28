@@ -16,7 +16,6 @@ export const RenderParagraph = ({ children }) => {
 }
 
 export const RenderTable = ({ children }) => {
-  console.log(children)
   return <table>hop</table>
 }
 
@@ -40,12 +39,13 @@ export const RenderCode = ({ children }) => {
   return <code>{children}</code>
 }
 
-export const RenderPre = args => {
-  // hack to get the code language
-  const bodyMarkdown = _get(args, 'children.0._owner.memoizedProps.markdown')
+export const RenderPre = bodyMarkdown => args => {
+  // hack to get the code fence language
   const codeSrc = _get(args, 'children.0.props.children.0')
 
   /*
+  Structure is usually:
+
   ```<lang>
   <codeSrc>
   ```

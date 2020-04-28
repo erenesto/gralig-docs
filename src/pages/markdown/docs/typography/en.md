@@ -6,7 +6,23 @@ section: 'typography'
 
 Gralig uses `rem` unit for the font size. The `html` element has 62.5% font size which means 10px = 1rem and the main font size defined as 1.6rem(16px). You don't need complex calculation for px to rem.
 
-As a font family we used [Catamaran](https://fonts.google.com/specimen/Catamaran 'font') while developing but we didn't include it inside library. You can use whatever font you like.
+As a font family we used [Catamaran](https://fonts.google.com/specimen/Catamaran 'font') while developing but we didn't include it inside library.
+
+If you want to use this fontş you can import like
+
+`html`
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600&display=swap" rel="stylesheet">
+```
+
+or `scss`
+
+```scss
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;600&display=swap')
+```
+
+or you can use whatever font you like.
 
 ## Headings and Subheadings
 

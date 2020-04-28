@@ -81,7 +81,7 @@ const Markdown = ({ markdown, mdtype }) => {
           createElement: React.createElement,
           components: {
             code: RenderCode,
-            pre: RenderPre,
+            pre: RenderPre(markdown),
             h2: RenderHeading2,
             h3: RenderHeading3,
             a: RenderAnchor,

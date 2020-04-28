@@ -1,19 +1,17 @@
+const config = require('./config')
+
 const defaultLanguage = 'en'
 const supportedLanguages = ['en', 'tr']
 
 module.exports = {
-  siteMetadata: {
-    siteUrl: 'https://gralig.com',
-    title: `Gralig CSS`,
-    description: `A simple, grayish CSS Library`,
-    defaultLanguage,
-    supportedLanguages,
-  },
+  siteMetadata: config.siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-layout`,
       options: {
@@ -43,18 +41,14 @@ module.exports = {
         redirect: false,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: config.manifest,
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: config.sitemap,
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

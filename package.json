@@ -24,11 +24,12 @@
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-plugin-sitemap": "^2.4.0",
     "gatsby-source-filesystem": "^2.1.56",
-    "gatsby-transformer-remark": "^2.7.1",
     "gatsby-transformer-sharp": "^2.3.19",
-    "gralig": "^0.2.0",
+    "gralig": "^0.4.0",
     "gray-matter": "^4.0.2",
     "hast-util-sanitize": "^2.0.2",
     "lodash.get": "^4.4.2",
@@ -51,6 +52,7 @@
     "unified": "^9.0.0"
   },
   "devDependencies": {
+    "gatsby-plugin-remove-trailing-slashes": "^2.2.4",
     "gatsby-plugin-sass": "^2.2.1",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1"

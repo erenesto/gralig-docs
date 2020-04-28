@@ -1,21 +1,28 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useContext, useEffect } from 'react'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 import SEO from '../components/seo'
 
-import 'gralig'
-import '../styles/gralig-doc.scss'
 import logo from '../images/gralig-logo.svg'
 import ThemeContext from '../context/ThemeContext'
-import { changeLocale } from 'gatsby-plugin-intl'
+import { navigate } from 'gatsby-plugin-intl'
 
-const IndexPage = () => {
+const IndexPage = ({ path }) => {
   const { isDark } = useContext(ThemeContext)
   const intl = useIntl()
 
   useEffect(() => {
     const ln = localStorage.getItem('gatsby-intl-language')
-    if (ln && ln !== 'en') {
-      changeLocale(ln)
+
+    if (
+      ln &&
+      ln !== undefined &&
+      ln === 'tr' &&
+      path !== '/tr' &&
+      ln !== 'en'
+    ) {
+      navigate('tr')
     }
   }, [])
 

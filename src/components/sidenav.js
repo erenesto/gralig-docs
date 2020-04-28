@@ -4,7 +4,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import SideNavItem from './sidenav-item'
 import NavMenuContext from '../context/navMenuContext'
 
-const SideNav = () => {
+const SideNav = ({ path }) => {
   const { isActive, toggleMenu } = useContext(NavMenuContext)
   const intl = useIntl()
 
@@ -133,6 +133,7 @@ const SideNav = () => {
                 key={link.name}
                 name={link.name}
                 linkTo={link.goTo}
+                path={path}
               />
             ))}
           </span>
@@ -145,6 +146,7 @@ const SideNav = () => {
                 key={link.name}
                 name={link.name}
                 linkTo={link.goTo}
+                path={path}
               />
             ))}
           </span>
@@ -157,6 +159,7 @@ const SideNav = () => {
                 key={link.name}
                 name={link.name}
                 linkTo={link.goTo}
+                path={path}
               />
             ))}
           </span>

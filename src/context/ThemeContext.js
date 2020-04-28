@@ -1,8 +1,11 @@
 import React, { createContext } from 'react'
 import { useState, useEffect } from 'react'
+import { prism, okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const initialState = {
   isDark: false,
+  prism,
+  okaidia,
   toggleTheme: () => {},
 }
 
@@ -24,7 +27,12 @@ const ThemeProvider = props => {
     setIsDark(prev => !prev)
   }
 
-  return <ThemeContext.Provider value={{ isDark, toggleTheme }} {...props} />
+  return (
+    <ThemeContext.Provider
+      value={{ isDark, toggleTheme, prism, okaidia }}
+      {...props}
+    />
+  )
 }
 
 export default ThemeContext

@@ -1,7 +1,8 @@
 {
   "title": "Gralig CSS",
   "description": "Sade, grimsi CSS Kütüphanesi",
-  "author": "Eren Guldas",
+  "author": "@erenesto",
+  "keywords": "css, css kütüphanesi, frontend, ui, tasarım, gri, basit css",
   "pages": {
     "index": "Ana Sayfa",
     "docs": "Gralig Dökümantasyonu",
@@ -38,6 +39,13 @@
   "words": {
     "copy": "Kopyala",
     "copied": "Kopyalandı!",
-    "docs": "Döküman"
+    "docs": "Döküman",
+    "builtwith": "ile yapıldı."
+  },
+  "404": {
+    "pagenotfound": "Sayfa Bulunamadı",
+    "emptyroute": "Aradığınız sayfa muhtemelen değiştirildi ya da kaldırıldı.",
+    "gotodocs": "Dökümanlara Dön",
+    "gotohome": "Ana Sayfaya Dön"
   }
 }

@@ -1,14 +1,20 @@
 /* eslint-disable import/first */
 import React, { useContext, useState, useEffect } from 'react'
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
-import {
-  defaultStyle,
-  atomOneDark,
-} from 'react-syntax-highlighter/dist/esm/styles/hljs'
+
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { useIntl } from 'gatsby-plugin-intl'
 import ThemeContext from '../context/ThemeContext'
 import Icons from '../images/icons/Icons'
+import { PrismLight as Highlighter } from 'react-syntax-highlighter'
+
+import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
+import scss from 'react-syntax-highlighter/dist/esm/languages/prism/scss'
+
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
+import okaidia from 'react-syntax-highlighter/dist/esm/styles/prism/okaidia'
+
+Highlighter.registerLanguage('bash', bash)
+Highlighter.registerLanguage('scss', scss)
 
 const CodeHighlighter = ({ language, children }) => {
   const intl = useIntl()
@@ -42,9 +48,9 @@ const CodeHighlighter = ({ language, children }) => {
             : intl.formatMessage({ id: 'words.copy' })}
         </button>
       </CopyToClipboard>
-      <SyntaxHighlighter language={language} style={atomOneDark}>
+      <Highlighter language={language} style={okaidia}>
         {children}
-      </SyntaxHighlighter>
+      </Highlighter>
     </div>
   ) : (
     <div className="gra-code-highlight">
@@ -65,9 +71,9 @@ const CodeHighlighter = ({ language, children }) => {
             : intl.formatMessage({ id: 'words.copy' })}
         </button>
       </CopyToClipboard>
-      <SyntaxHighlighter language={language} style={defaultStyle}>
+      <Highlighter language={language} style={prism}>
         {children}
-      </SyntaxHighlighter>
+      </Highlighter>
     </div>
   )
 }

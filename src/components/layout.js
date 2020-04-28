@@ -22,24 +22,22 @@ export const query = graphql`
   }
 `
 
-const Layout = ({ children, data }) => {
+const Layout = ({ data, children, location }) => {
   const { isDark } = useContext(ThemeContext)
-
-  // console.log(data.current)
-
   const renderLayout = () => {
-    if (data && data.current.fields.page.layout === 'docs') {
+    if (data === undefined || data.allSitePage) {
+      return <HomeLayout>{children}</HomeLayout>
+    } else if (data.current && data.current.fields.page.layout === 'docs') {
       return (
         <div className={`${isDark ? 'dark' : ''} gra-wrapper`}>
           <Header />
           <div className="gra-main">
-            <SideNav />
+            <SideNav path={location.pathname} />
             <main className="gra-content-wrapper">{children}</main>
           </div>
         </div>
       )
     }
-    return <HomeLayout>{children}</HomeLayout>
   }
 
   return renderLayout()

@@ -4,7 +4,7 @@ mdtype: 'MDHTML'
 section: 'form'
 ---
 
-Gralig provides simple form elements including custom [checkboxes](/docs/checkbox), [radio buttons](/docs/radio), [switches](/docs/switches) along with simple inputs.
+Gralig provides simple form elements including custom [checkboxes](/docs/checkbox), [radio buttons](/docs/radio), [switches](/docs/switch) along with simple inputs.
 
 <div class="gra-s-wrapper">
   <div class="form-group">

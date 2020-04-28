@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:300,400,600&display=swap');
 @import 'gralig/scss/abstracts/all.scss';
-@import 'gralig/scss/themes/themes.scss';
+@import 'gralig/scss/modes/modes.scss';
 
 * {
   transition: background-color 0.2s ease-in;
@@ -65,6 +65,9 @@ a {
       line-height: 0;
       &::after {
         bottom: 0;
+      }
+      &:focus {
+        outline: none;
       }
     }
   }
@@ -207,8 +210,8 @@ a {
     transition: transform 0.2s ease-in;
     z-index: 99;
     overflow-y: auto;
-    @include themify($themes) {
-      border-color: themed('colorBorder');
+    @include moder($modes) {
+      border-color: mode('colorBorder');
     }
 
     @include min-width($breakpoint-s) {
@@ -232,8 +235,8 @@ a {
       background-color: $color-background;
       z-index: 10;
       padding-bottom: $space;
-      @include themify($themes) {
-        background-color: themed('colorBackground');
+      @include moder($modes) {
+        background-color: mode('colorBackground');
       }
     }
 
@@ -273,8 +276,8 @@ a {
         transition: all 0.2s ease-in;
         opacity: 0;
         visibility: hidden;
-        @include themify($themes) {
-          background-color: themed('colorLinkHover');
+        @include moder($modes) {
+          background-color: mode('colorLinkHover');
         }
       }
 
@@ -290,14 +293,14 @@ a {
         opacity: 0;
         visibility: hidden;
         transition: all 0.2s ease-in;
-        @include themify($themes) {
-          background-color: themed('colorLinkFont');
+        @include moder($modes) {
+          background-color: mode('colorLinkFont');
         }
       }
       &.gra-sidenav-active-link {
         color: #a8aeb3;
-        @include themify($themes) {
-          color: themed('colorLinkHover');
+        @include moder($modes) {
+          color: mode('colorLinkHover');
         }
         &::after {
           height: 60%;
@@ -316,8 +319,8 @@ a {
     &:not(:last-of-type) {
       border-bottom: 1px solid $color-border;
     }
-    @include themify($themes) {
-      border-color: themed('colorBorder');
+    @include moder($modes) {
+      border-color: mode('colorBorder');
     }
   }
 
@@ -334,13 +337,13 @@ a {
         background: $color-light;
         opacity: 1;
         transition: none;
-        @include themify($themes) {
-          background-color: themed('colorMain');
-          color: themed('colorFontButton');
+        @include moder($modes) {
+          background-color: mode('colorMain');
+          color: mode('colorFontButton');
         }
         svg path {
-          @include themify($themes) {
-            fill: themed('colorFontButton');
+          @include moder($modes) {
+            fill: mode('colorFontButton');
           }
         }
       }
@@ -351,14 +354,18 @@ a {
     pre {
       padding: $space-m $space-l !important;
       border-radius: $border-radius;
+      background: $color-code !important;
+      @include moder($modes) {
+        background: mode('colorCode') !important;
+      }
     }
     code {
       border: 0;
       font-size: 1.2rem;
       padding: 0;
-      text-shadow: none;
-      background-color: transparent;
+      text-shadow: none !important;
       margin: 0;
+      background-color: transparent;
     }
   }
 
@@ -415,8 +422,8 @@ a {
       left: -4px;
       margin-top: -2px;
       content: '';
-      @include themify($themes) {
-        border-color: themed('colorBorder');
+      @include moder($modes) {
+        border-color: mode('colorBorder');
       }
     }
   }
@@ -460,6 +467,108 @@ a {
       }
     }
   }
+  &-section-responsive {
+    table td {
+      font-family: Consolas, Menlo, Courier, monospace;
+      font-size: 1.2rem;
+    }
+  }
+  &-section-grid {
+    em {
+      font-size: 1.4rem;
+    }
+    @include min-width($breakpoint-xs) {
+      .col-test.span {
+        display: inline-block !important;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+        left: 0;
+        margin-left: 1.2rem;
+        border: 1px dashed hsl(204, 7%, 86%);
+        background-color: transparent;
+        color: hsl(207, 13%, 14%);
+        min-height: 3.6rem;
+        &.span90 {
+          width: calc(90% - 2.4rem);
+        }
+        &.span84 {
+          width: calc(83.33333333% - 2.4rem);
+        }
+        &.span80 {
+          width: calc(80% - 2.4rem);
+        }
+        &.span75 {
+          width: calc(75% - 2.4rem);
+        }
+        &.span70 {
+          width: calc(70% - 2.4rem);
+        }
+        &.span67 {
+          width: calc(66.66666666% - 2.4rem);
+        }
+        &.span60 {
+          width: calc(60% - 2.4rem);
+        }
+        &.span50 {
+          width: calc(50% - 2.4rem);
+        }
+        &.span40 {
+          width: calc(40% - 2.4rem);
+        }
+        &.span33 {
+          width: calc(33.33333333% - 2.4rem);
+        }
+        &.span30 {
+          width: calc(30% - 2.4rem);
+        }
+        &.span25 {
+          width: calc(25% - 2.4rem);
+        }
+        &.span20 {
+          width: calc(20% - 2.4rem);
+        }
+        &.span16 {
+          width: calc(16% - 2.4rem);
+        }
+        &.span10 {
+          width: calc(10% - 2.4rem);
+        }
+      }
+    }
+    .col-test.span {
+      display: none;
+      @include moder($modes) {
+        border: 1px dotted mode('colorBorder');
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+      }
+    }
+    .row {
+      position: relative;
+    }
+
+    .col-test {
+      display: block;
+      padding: 8px;
+      border: 1px solid hsl(207, 7%, 68%);
+      background: hsl(207, 7%, 68%);
+      border-radius: 2px;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}
+
+.dark {
+  .col-test {
+    background: hsl(207, 13%, 14%);
+    border-color: hsl(207, 13%, 14%);
+  }
+  .col-test.span {
+    border-color: hsl(206, 7%, 40%);
+    color: hsl(204, 7%, 86%);
+  }
 }
 
 .modal-wrapper.open {
@@ -486,295 +595,10 @@ a {
   &.blackpearl-bg,
   &.woodsmoke-bg,
   &.shark-bg {
-    @include themify($themes) {
-      border: 1px dotted themed('colorBorder');
+    @include moder($modes) {
+      border: 1px dotted mode('colorBorder');
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px;
     }
-  }
-}
-
-// will be deleted
-.table.table-bordered {
-  td,
-  th {
-    border: 1px solid $color-border;
-    &:first-child {
-      padding-left: $space-m;
-    }
-    &:last-child {
-      padding-right: $space-m;
-    }
-  }
-}
-.card {
-  display: flex;
-  width: 100%;
-  min-width: 5rem;
-  flex-direction: column;
-  margin-bottom: $space;
-  border: 1px solid $color-border;
-  border-radius: $border-radius;
-  @include themify($themes) {
-    background-color: themed('colorCardBg');
-    border-color: themed('cardOutlineBorder');
-  }
-  &.card-horizontal {
-    flex-direction: row;
-  }
-  &-title {
-    border-bottom: 1px solid $color-border;
-    font-weight: $font-bold;
-    line-height: 1;
-    padding-block: $content-padding-block;
-    padding-inline: $content-padding-inline;
-    @include themify($themes) {
-      border-color: themed('colorBorder');
-    }
-  }
-  &-media-wrapper {
-    overflow: hidden;
-    flex: 1;
-    margin-top: -1px;
-    margin-right: -1px;
-    margin-left: -1px;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-    * {
-      display: block;
-    }
-  }
-  &-media-bottom {
-    .card-media-wrapper {
-      margin-top: 0;
-      margin-bottom: -1px;
-      border-bottom-left-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-    &.card {
-      flex-direction: column-reverse;
-    }
-  }
-
-  &-media-left {
-    .card-media-wrapper {
-      margin-right: 0;
-      margin-bottom: -1px;
-      border-bottom-left-radius: $border-radius;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: 0;
-    }
-  }
-  &-media-right {
-    .card-media-wrapper {
-      margin-bottom: -1px;
-      margin-left: 0;
-      border-bottom-right-radius: $border-radius;
-      border-top-left-radius: 0;
-      border-top-right-radius: $border-radius;
-    }
-    &.card {
-      flex-direction: row-reverse;
-    }
-  }
-  &-content {
-    flex: 1;
-  }
-  &-body {
-    padding-block: $content-padding-block;
-    padding-inline: $content-padding-inline;
-  }
-  p {
-    margin-bottom: 0;
-  }
-}
-
-//
-
-.blackpearl-bg {
-  background-color: $blackpearl;
-}
-.woodsmoke-bg {
-  background-color: $woodsmoke;
-}
-.shark-bg {
-  background-color: $shark;
-}
-.smoke-bg {
-  background-color: $smoke;
-}
-.abbey-bg {
-  background-color: $abbey;
-}
-.raven-bg {
-  background-color: $raven;
-}
-.oslo-bg {
-  background-color: $oslo;
-}
-.mischka-bg {
-  background-color: $mischka;
-}
-.ghost-bg {
-  background-color: $ghost;
-}
-.iron-bg {
-  background-color: $iron;
-}
-.porcelain-bg {
-  background-color: $porcelain;
-}
-.summer-lighter-bg {
-  background-color: $summer-lighter;
-}
-.summer-light-bg {
-  background-color: $summer-light;
-}
-.summer-bg {
-  background-color: $summer;
-}
-.summer-dark-bg {
-  background-color: $summer-dark;
-}
-.summer-darker-bg {
-  background-color: $summer-darker;
-}
-.shamrock-lighter-bg {
-  background-color: $shamrock-lighter;
-}
-.shamrock-light-bg {
-  background-color: $shamrock-light;
-}
-.shamrock-bg {
-  background-color: $shamrock;
-}
-.shamrock-dark-bg {
-  background-color: $shamrock-dark;
-}
-.shamrock-darker-bg {
-  background-color: $shamrock-darker;
-}
-.tulip-lighter-bg {
-  background-color: $tulip-lighter;
-}
-.tulip-light-bg {
-  background-color: $tulip-light;
-}
-.tulip-bg {
-  background-color: $tulip;
-}
-.tulip-dark-bg {
-  background-color: $tulip-dark;
-}
-.tulip-darker-bg {
-  background-color: $tulip-darker;
-}
-.flame-lighter-bg {
-  background-color: $flame-lighter;
-}
-.flame-light-bg {
-  background-color: $flame-light;
-}
-.flame-bg {
-  background-color: $flame;
-}
-.flame-dark-bg {
-  background-color: $flame-dark;
-}
-.flame-darker-bg {
-  background-color: $flame-darker;
-}
-
-.gra-section-grid {
-  em {
-    font-size: 1.4rem;
-  }
-  @include min-width($breakpoint-xs) {
-    .col-test.span {
-      display: inline-block !important;
-      position: absolute;
-      top: 1.2rem;
-      right: 1.2rem;
-      left: 0;
-      margin-left: 1.2rem;
-      border: 1px dashed hsl(204, 7%, 86%);
-      background-color: transparent;
-      color: hsl(207, 13%, 14%);
-      min-height: 3.6rem;
-      &.span90 {
-        width: calc(90% - 2.4rem);
-      }
-      &.span84 {
-        width: calc(83.33333333% - 2.4rem);
-      }
-      &.span80 {
-        width: calc(80% - 2.4rem);
-      }
-      &.span75 {
-        width: calc(75% - 2.4rem);
-      }
-      &.span70 {
-        width: calc(70% - 2.4rem);
-      }
-      &.span67 {
-        width: calc(66.66666666% - 2.4rem);
-      }
-      &.span60 {
-        width: calc(60% - 2.4rem);
-      }
-      &.span50 {
-        width: calc(50% - 2.4rem);
-      }
-      &.span40 {
-        width: calc(40% - 2.4rem);
-      }
-      &.span33 {
-        width: calc(33.33333333% - 2.4rem);
-      }
-      &.span30 {
-        width: calc(30% - 2.4rem);
-      }
-      &.span25 {
-        width: calc(25% - 2.4rem);
-      }
-      &.span20 {
-        width: calc(20% - 2.4rem);
-      }
-      &.span16 {
-        width: calc(16% - 2.4rem);
-      }
-      &.span10 {
-        width: calc(10% - 2.4rem);
-      }
-    }
-  }
-  .col-test.span {
-    display: none;
-  }
-  .row {
-    position: relative;
-  }
-
-  .col-test {
-    display: block;
-    padding: 8px;
-    border: 1px solid hsl(207, 7%, 68%);
-    background: hsl(207, 7%, 68%);
-    border-radius: 2px;
-    font-size: 12px;
-    text-align: center;
-  }
-}
-
-.dark .example-grids {
-  .col-test {
-    background: hsl(207, 13%, 14%);
-  }
-  .col-test.span {
-    border-color: hsl(206, 7%, 40%);
-    color: hsl(204, 7%, 86%);
   }
 }

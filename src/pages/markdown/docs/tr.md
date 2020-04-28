@@ -8,7 +8,7 @@ Gralig sade, gri tonlu bir CSS kütüphanesi ve gzip hali 8KB olan bir `.css` do
 
 Gralig size küçük element stilleri ile birlikte basit bir grid sistemi ve karanlık mod özellikleri sağlamakta. Herhangi bir kısmında yardımcı olarak JS kullanılmadı.
 
-Gralig'i kolayca renklendirmek ya da hızlı taslaklar oluşturmak için yardımcı classları, bunların yetersiz kaldığı yerde daha fazla özelleştirmek için ise `.scss` dosyalarını kullanabilirsiniz.
+Gralig'i kolayca renklendirmek ya da hızlı taslaklar oluşturmak için [yardımcı classları](/docs/utils 'Yardımcılar'), bunların yetersiz kaldığı yerde daha fazla özelleştirmek için ise `.scss` dosyalarını kullanabilirsiniz.
 
 ## Başlayalım
 
@@ -32,4 +32,4 @@ yarn install gralig
 
 En son versiyonu Github üzerinden indirebilirsiniz.
 
-[Gralig.zip](https://github.com/erenesto/gralig/releases/download/v0.2.0/gralig.zip 'Indir Butonu')
+[Gralig.zip](https://github.com/erenesto/gralig/releases/download/v0.4.0/gralig-v0.4.0.zip 'Indir Butonu')

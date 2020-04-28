@@ -1,52 +1,3 @@
-// const { createFilePath } = require('gatsby-source-filesystem')
-// const path = require('path')
-
-// exports.onCreateNode = ({ node, getNode, actions, getNodes }) => {
-//   const { createNodeField } = actions
-
-//   if (node.internal.type === 'MarkdownRemark') {
-//     const slug = createFilePath({ node, getNode, basePath: 'docs' })
-
-//     createNodeField({
-//       node,
-//       name: 'slug',
-//       value: slug,
-//     })
-//   }
-// }
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-
-//   const response = await graphql(`
-//     query {
-//       allMarkdownRemark {
-//         edges {
-//           node {
-//             fields {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   const docs = response.data.allMarkdownRemark.edges
-
-//   const docsTemplate = path.resolve('./src/templates/doc-template.js')
-
-//   docs.forEach(({ node }) => {
-//     createPage({
-//       path: `docs${node.fields.slug}`,
-//       component: docsTemplate,
-//       context: {
-//         slug: node.fields.slug,
-//       },
-//     })
-//   })
-// }
-
 const fs = require('fs')
 const path = require('path')
 const grayMatter = require('gray-matter')
@@ -72,8 +23,8 @@ const _isMarkdownNode = n => n.internal.mediaType === `text/markdown`
 const _loadMarkdownFile = n =>
   grayMatter(fs.readFileSync(n.absolutePath, 'utf-8').toString())
 
-const _generatePagePath = ({ pageId }) => {
-  return `/docs/${pageId}`
+const _generatePagePath = ({ pageType, pageId }) => {
+  return pageId ? `/${pageType}/${pageId}` : `/${pageType}`
 }
 
 const _wrapGraphql = graphql => async str => {

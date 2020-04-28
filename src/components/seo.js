@@ -9,6 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -18,13 +19,17 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            author
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const intl = useIntl()
+
+  const metaDescription =
+    description || intl.formatMessage({ id: 'description' })
 
   return (
     <Helmet
@@ -41,6 +46,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          name: 'keywords',
+          content: intl.formatMessage({ id: 'keywords' }),
         },
         {
           property: `og:description`,

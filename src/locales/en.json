@@ -1,7 +1,8 @@
 {
   "title": "Gralig CSS",
   "description": "A modest, grayish CSS Library",
-  "author": "Eren Guldas",
+  "author": "@erenesto",
+  "keywords": "css, css library, clean css, grayish, frontend, ui, modest, pure, clean design, lightweight css",
   "pages": {
     "index": "Home",
     "docs": "Gralig Documentation",
@@ -38,6 +39,13 @@
   "words": {
     "copy": "Copy",
     "copied": "Copied!",
-    "docs": "Docs"
+    "docs": "Docs",
+    "builtwith": "Built with"
+  },
+  "404": {
+    "pagenotfound": "Page Not Found",
+    "emptyroute": "Oops! The page you are looking for has been changed or removed.",
+    "gotodocs": "Go To Docs",
+    "gotohome": "Go To Home"
   }
 }
