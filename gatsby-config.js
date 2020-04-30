@@ -52,9 +52,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: config.ga.identifier,
+        trackingId: config.google.gaIdentifier,
         anonymize: true,
         allowLinker: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: config.google.gtmIdentifier,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -22,7 +22,8 @@ module.exports = {
     sitemap: 'https://gralig.com/sitemap.xml',
     policy: [{ userAgent: '*', allow: '/' }],
   },
-  ga: {
-    identifier: `UA-43800653-10`,
+  google: {
+    gaIdentifier: `UA-43800653-10`,
+    gtmIdentifier: `GTM-T9ZL5ZJ`,
   },
 }
