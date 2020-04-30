@@ -26,7 +26,8 @@ const IndexPage = ({ path }) => {
       ln &&
       ln !== undefined &&
       ln === 'tr' &&
-      path !== '/tr' && path !== '/en'
+      path !== '/tr' &&
+      path !== '/en'
     ) {
       navigate('tr')
     }
@@ -38,7 +39,8 @@ const IndexPage = ({ path }) => {
         lang={intl.locale}
         title={intl.formatMessage({ id: 'pages.index' })}
         siteTitle={intl.formatMessage({ id: 'title' })}
-        page={"home"}
+        page={'home'}
+        description={intl.formatMessage({ id: 'summary' })}
       />
       <div className={`gra-home-description ${isDark ? 'dark' : ''}`}>
         <img className="gra-home-logo" src={logo} alt="Gralig CSS Logo"></img>

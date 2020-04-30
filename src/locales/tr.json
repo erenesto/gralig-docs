@@ -1,6 +1,7 @@
 {
   "title": "Gralig CSS",
   "description": "Sade, grimsi CSS Kütüphanesi",
+  "summary": "Gralig sade, gri tonlu bir CSS kütüphanesi. Bu kütüphaneyi başlangıç yardımcınız olarak kullanabilirsiniz.",
   "author": "@erenesto",
   "keywords": "css, css kütüphanesi, frontend, ui, tasarım, gri, basit css",
   "pages": {

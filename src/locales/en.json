@@ -1,6 +1,7 @@
 {
   "title": "Gralig CSS",
   "description": "A modest, grayish CSS Library",
+  "summary": "Gralig is a modest, grayish CSS library. It can be starting point for your CSS development.",
   "author": "@erenesto",
   "keywords": "css, css library, clean css, grayish, frontend, ui, modest, pure, clean design, lightweight css",
   "pages": {
