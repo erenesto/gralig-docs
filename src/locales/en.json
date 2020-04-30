@@ -4,37 +4,89 @@
   "author": "@erenesto",
   "keywords": "css, css library, clean css, grayish, frontend, ui, modest, pure, clean design, lightweight css",
   "pages": {
-    "index": "Home",
+    "index": "Gralig CSS",
     "docs": "Gralig Documentation",
     "404": "Error 404"
   },
   "sidenavLinks": {
-    "docs": { "name": "Introduction" },
-    "colors": { "name": "Colors" },
-    "grid": { "name": "Grid" },
-    "dark": { "name": "Dark Mode" },
-    "vars": { "name": "Variables" },
-    "responsive": { "name": "Responsive" },
-    "utils": { "name": "Utils" },
-    "typography": { "name": "Typography" },
-    "button": { "name": "Button" },
-    "form": { "name": "Form" },
-    "custom-inputs": { "name": "Custom Inputs" },
-    "checkbox": { "name": "Checkbox" },
-    "radio": { "name": "Radio" },
-    "switch": { "name": "Switch" },
-    "nav": { "name": "Nav" },
-    "navbar": { "name": "Navbar" },
-    "footer": { "name": "Footer" },
-    "breadcrumb": { "name": "Breadcrumb" },
-    "card": { "name": "Card" },
-    "alert": { "name": "Alert" },
-    "list": { "name": "List" },
-    "table": { "name": "Table" },
-    "dropdown": { "name": "Dropdown" },
-    "progress": { "name": "Progress" },
-    "loading": { "name": "Loading" },
-    "modal": { "name": "Modal" }
+    "docs": {
+      "name": "Introduction"
+    },
+    "colors": {
+      "name": "Colors"
+    },
+    "grid": {
+      "name": "Grid"
+    },
+    "dark": {
+      "name": "Dark Mode"
+    },
+    "vars": {
+      "name": "Variables"
+    },
+    "responsive": {
+      "name": "Responsive"
+    },
+    "utils": {
+      "name": "Utils"
+    },
+    "typography": {
+      "name": "Typography"
+    },
+    "button": {
+      "name": "Button"
+    },
+    "form": {
+      "name": "Form"
+    },
+    "custom-inputs": {
+      "name": "Custom Inputs"
+    },
+    "checkbox": {
+      "name": "Checkbox"
+    },
+    "radio": {
+      "name": "Radio"
+    },
+    "switch": {
+      "name": "Switch"
+    },
+    "nav": {
+      "name": "Nav"
+    },
+    "navbar": {
+      "name": "Navbar"
+    },
+    "footer": {
+      "name": "Footer"
+    },
+    "breadcrumb": {
+      "name": "Breadcrumb"
+    },
+    "card": {
+      "name": "Card"
+    },
+    "alert": {
+      "name": "Alert"
+    },
+    "list": {
+      "name": "List"
+    },
+    "table": {
+      "name": "Table"
+    },
+    "dropdown": {
+      "name": "Dropdown"
+    },
+    "progress": {
+      "name": "Progress"
+    },
+    "loading": {
+      "name": "Loading"
+    },
+    "modal": {
+      "name": "Modal"
+    }
   },
   "words": {
     "copy": "Copy",

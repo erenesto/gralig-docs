@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 
 import logo from '../images/gralig-logo.svg'
 import ThemeContext from '../context/ThemeContext'
-import { navigate, changeLocale } from 'gatsby-plugin-intl'
+import { navigate } from 'gatsby-plugin-intl'
 
 const IndexPage = ({ path }) => {
   const { isDark } = useContext(ThemeContext)
@@ -38,6 +38,7 @@ const IndexPage = ({ path }) => {
         lang={intl.locale}
         title={intl.formatMessage({ id: 'pages.index' })}
         siteTitle={intl.formatMessage({ id: 'title' })}
+        page={"home"}
       />
       <div className={`gra-home-description ${isDark ? 'dark' : ''}`}>
         <img className="gra-home-logo" src={logo} alt="Gralig CSS Logo"></img>

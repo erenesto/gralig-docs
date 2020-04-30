@@ -11,7 +11,7 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, page }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -37,7 +37,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={page && page === 'home' ? `${site.siteMetadata.title}` : `%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
