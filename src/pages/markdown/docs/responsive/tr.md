@@ -8,6 +8,7 @@ Gralig mobil uyumluluk için 5 kırılım noktası değişkeni ve 2 mixin aracı
 
 ```scss
 @import 'gralig/scss/abstracts/_variables.scss';
+@import 'gralig/scss/abstracts/_mixins.scss';
 ```
 
 ## Kırılım Noktası Değişkenleri

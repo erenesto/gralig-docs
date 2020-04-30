@@ -8,6 +8,7 @@ Gralig uses 5 breakpoint variables and 2 mixins for mobile compatibility.
 
 ```scss
 @import 'gralig/scss/abstracts/_variables.scss';
+@import 'gralig/scss/abstracts/_mixins.scss';
 ```
 
 ## Breakpoints
