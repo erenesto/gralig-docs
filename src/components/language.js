@@ -9,7 +9,6 @@ const languageName = {
 
 const Language = () => {
   const [language, setLanguage] = useState('')
-
   const onLangChange = (e, lang) => {
     if (e.keyCode !== undefined) {
       onSpecificKeyPress(e, 'Enter', changeLocale, lang)
@@ -20,10 +19,13 @@ const Language = () => {
 
   useEffect(() => {
     const ln = localStorage.getItem('gatsby-intl-language')
+
     setLanguage(ln)
     if (ln && ln !== language && ln !== 'en') {
       changeLocale(ln)
     }
+
+
   }, [language])
 
   return (
@@ -34,7 +36,7 @@ const Language = () => {
             <span
               className={`nav-link gra-menu-icon-wrapper ${
                 currentLocale === lang ? 'gra-lang-active' : ''
-              }`}
+                }`}
               key={lang}
               role="button"
               tabIndex={0}

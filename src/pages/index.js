@@ -6,25 +6,31 @@ import SEO from '../components/seo'
 
 import logo from '../images/gralig-logo.svg'
 import ThemeContext from '../context/ThemeContext'
-import { navigate } from 'gatsby-plugin-intl'
+import { navigate, changeLocale } from 'gatsby-plugin-intl'
 
 const IndexPage = ({ path }) => {
   const { isDark } = useContext(ThemeContext)
   const intl = useIntl()
+  const { locale } = intl
 
   useEffect(() => {
     const ln = localStorage.getItem('gatsby-intl-language')
+
+    if (locale !== ln || ln !== path) {
+      localStorage.setItem('gatsby-intl-language', intl.locale)
+    }
+
+    //some fixes for intl navigation
 
     if (
       ln &&
       ln !== undefined &&
       ln === 'tr' &&
-      path !== '/tr' &&
-      ln !== 'en'
+      path !== '/tr' && path !== '/en'
     ) {
       navigate('tr')
     }
-  }, [])
+  }, [locale, path])
 
   return (
     <>

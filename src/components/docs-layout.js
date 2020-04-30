@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useIntl } from 'gatsby-plugin-intl'
 
@@ -9,13 +9,13 @@ const DocsLayout = ({ children }) => {
     if (intl.locale === 'tr') {
       return (
         <footer className="footer">
-          <span role="img" aria-label="Headphone">
+          <span role="img" aria-label="Kulaklık">
             🎧
           </span>
-          <span role="img" aria-label="Coffee">
+          <span role="img" aria-label="Kahve">
             ☕️
           </span>
-          <span role="img" aria-label="Heart">
+          <span role="img" aria-label="Kalp">
             ❤️
           </span>
           &amp; Gralig ile yapıldı. © 2019

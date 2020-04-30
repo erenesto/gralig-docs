@@ -6,6 +6,10 @@ section: 'responsive'
 
 Gralig mobil uyumluluk için 5 kırılım noktası değişkeni ve 2 mixin aracı kullanır.
 
+```scss
+@import 'gralig/scss/abstracts/_variables.scss';
+```
+
 ## Kırılım Noktası Değişkenleri
 
 <div class="gra-s-wrapper">

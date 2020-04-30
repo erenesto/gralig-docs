@@ -71,8 +71,6 @@ $modes: (
 
 ## Düzenlemek ya da Eklemek
 
-If you will use new mode or overwrite existing mod, you should create `$modes` map and add your mod inside it. If you will use more than one mode, you should use same key names for each mode.
-
 Yeni bir mod oluşturmak isterseniz ya da hali hazırda olanı değiştirmek isterseniz, öncelikle `$modes` adında bir map oluşturup istediğiniz modları içerisine ekleyebilirsiniz. Birden çok mod ekleyecekseniz, her biri için aynı isimde keyler oluşturmalısınız.
 
 Örnek;
