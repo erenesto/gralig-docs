@@ -37,7 +37,11 @@ function SEO({ description, lang, meta, title, page }) {
         lang,
       }}
       title={title}
-      titleTemplate={page && page === 'home' ? `${site.siteMetadata.title}` : `%s | ${site.siteMetadata.title}`}
+      titleTemplate={
+        page && page === 'home'
+          ? `${site.siteMetadata.title}`
+          : `%s | ${site.siteMetadata.title}`
+      }
       meta={[
         {
           name: `description`,

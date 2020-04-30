@@ -22,4 +22,7 @@ module.exports = {
     sitemap: 'https://gralig.com/sitemap.xml',
     policy: [{ userAgent: '*', allow: '/' }],
   },
+  ga: {
+    identifier: `UA-43800653-10`,
+  },
 }
