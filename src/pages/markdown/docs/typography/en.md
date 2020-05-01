@@ -8,7 +8,7 @@ Gralig uses `rem` unit for the font size. The `html` element has 62.5% font size
 
 As a font family we used [Catamaran](https://fonts.google.com/specimen/Catamaran 'font') while developing but we didn't include it inside library.
 
-If you want to use this fontş you can import like
+If you want to use this font, you can import to
 
 `html`
 
