@@ -298,7 +298,7 @@ a {
         }
       }
       &.gra-sidenav-active-link {
-        color: #a8aeb3;
+        color: $color-main;
         @include moder($modes) {
           color: mode('colorLinkHover');
         }
@@ -474,9 +474,6 @@ a {
     }
   }
   &-section-grid {
-    em {
-      font-size: 1.4rem;
-    }
     @include min-width($breakpoint-xs) {
       .col-test.span {
         display: inline-block !important;
@@ -558,6 +555,10 @@ a {
       text-align: center;
     }
   }
+}
+
+em {
+  font-size: 1.4rem;
 }
 
 .dark {

@@ -14,6 +14,8 @@ You can use `.dark` class to use the dark mode offered by Gralig. Simply use it 
 </body>
 ```
 
+_You can switch to dark mode on navbar and see how the elements look in this mode._
+
 ## Our Map
 
 We prepared scss map like this;

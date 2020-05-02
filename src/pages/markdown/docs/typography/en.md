@@ -133,14 +133,18 @@ You can use three different sizes of paragraphs. You can use a normal paragraph 
 
 <div class="gra-doc-para">
   <div class="gra-s-wrapper">
-    <p class="p-large">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tenetur dolore debitis nostrum rem inventore dicta quidem eaque delectus
+    <p>
+      <span class="p-large">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tenetur dolore debitis nostrum rem inventore dicta quidem eaque delectus
+      </span>
     </p>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tenetur dolore debitis nostrum rem inventore dicta quidem eaque delectus
     </p>
-    <p class="p-small">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tenetur dolore debitis nostrum rem inventore dicta quidem eaque delectus
+    <p>
+      <span class="p-small">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tenetur dolore debitis nostrum rem inventore dicta quidem eaque delectus
+      </span>
     </p>
   </div>
 

@@ -14,6 +14,8 @@ Gralig içerisinde hazır olarak gelen karanlık modu kullanmak için `.dark` cl
 </body>
 ```
 
+_Yukarıdan karanlık moda geçiş yaparak elementlerin bu modda nasıl göründüğünü görebilirsiniz._
+
 ## Kullanılan Map
 
 Aşağıdaki gibi bir scss map kullanıldı;
