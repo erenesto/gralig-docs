@@ -8,7 +8,9 @@ Thanks for `<details>` and `<summary>` tags, we created a dropdown list without 
 
 <div class="gra-s-wrapper">
   <details class="dropdown">
-    <summary class="btn dropdown-btn">Dropdown</summary>
+    <summary class="dropdown-wrapper">
+      <span class="btn dropdown-btn">Dropdown</span>
+    </summary>
     <ul class="dropdown-list block-list">
       <li class="dropdown-list-item list-item">
         <a class="dropdown-list-link list-link" href="#">Item 1</a>
@@ -25,7 +27,9 @@ Thanks for `<details>` and `<summary>` tags, we created a dropdown list without 
 
 ```html
 <details class="dropdown">
-  <summary class="btn dropdown-btn">Dropdown</summary>
+  <summary class="dropdown-wrapper">
+    <span class="btn dropdown-btn">Dropdown</span>
+  </summary>
   <ul class="dropdown-list block-list">
     <li class="dropdown-list-item list-item">
       <a class="dropdown-list-link list-link" href="#">Item 1</a>

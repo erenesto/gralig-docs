@@ -8,7 +8,9 @@ section: 'dropdown'
 
 <div class="gra-s-wrapper">
   <details class="dropdown">
-    <summary class="btn dropdown-btn">Açılır Liste</summary>
+    <summary class="dropdown-wrapper">
+      <span class="btn dropdown-btn">Açılır Liste</span>
+    </summary>
     <ul class="dropdown-list block-list">
       <li class="dropdown-list-item list-item">
         <a class="dropdown-list-link list-link" href="#">Eleman 1</a>
@@ -25,7 +27,9 @@ section: 'dropdown'
 
 ```html
 <details class="dropdown">
-  <summary class="btn dropdown-btn">Açılır Liste</summary>
+  <summary class="dropdown-wrapper">
+    <span class="btn dropdown-btn">Açılır Liste</span>
+  </summary>
   <ul class="dropdown-list block-list">
     <li class="dropdown-list-item list-item">
       <a class="dropdown-list-link list-link" href="#">Eleman 1</a>

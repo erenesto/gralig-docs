@@ -31,7 +31,7 @@
     "gatsby-plugin-sitemap": "^2.4.0",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
-    "gralig": "^0.4.0",
+    "gralig": "^0.7.0",
     "gray-matter": "^4.0.2",
     "hast-util-sanitize": "^2.0.2",
     "lodash.get": "^4.4.2",
