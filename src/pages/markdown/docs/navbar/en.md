@@ -6,34 +6,34 @@ section: 'navbar'
 
 A simple horizontal navigation bar.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
 
-  <header class="navbar">
-<div class="container">
-<div class="navbar-logo">
+  <header class="gra-navbar">
+<div class="gra-container">
+<div class="gra-navbar-logo">
 
-[<img class="navbar-logo-img" src="https://res.cloudinary.com/erenesto/image/upload/v1587055102/wdrsnzjfdlxvv2vvfspx.svg" alt="" />](/docs/navbar/# 'NavbarLogoLink')
+[<img class="gra-navbar-logo-img" src="https://res.cloudinary.com/erenesto/image/upload/v1587055102/wdrsnzjfdlxvv2vvfspx.svg" alt="" />](/docs/navbar/# 'NavbarLogoLink')
 
 </div>
-<div class="navbar-content">
+<div class="gra-navbar-content">
 <nav>
-<ul class="nav">
-<li class="nav-item">
+<ul class="gra-nav">
+<li class="gra-nav-item">
 
 [Home](/docs/nav/# 'NavLink')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [About](/docs/nav/# 'NavLink')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [Contact](/docs/nav/# 'NavLinkCurrent')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [Works](/docs/nav/# 'NavLink')
 
@@ -47,27 +47,27 @@ A simple horizontal navigation bar.
 </div>
 
 ```html
-<header class="navbar">
-  <div class="container">
-    <div class="navbar-logo">
-      <a class="navbar-logo-link" href="#">
-        <img class="navbar-logo-img" src="assets/gralig-logo.svg" alt="" />
+<header class="gra-navbar">
+  <div class="gra-container">
+    <div class="gra-navbar-logo">
+      <a class="gra-navbar-logo-link" href="#">
+        <img class="gra-navbar-logo-img" src="assets/gralig-logo.svg" alt="" />
       </a>
     </div>
-    <div class="navbar-content">
+    <div class="gra-navbar-content">
       <nav>
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+        <ul class="gra-nav">
+          <li class="gra-nav-item">
+            <a class="gra-nav-link" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+          <li class="gra-nav-item">
+            <a class="gra-nav-link" href="#">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link current" href="#" aria-current="page">Contact</a>
+          <li class="gra-nav-item">
+            <a class="gra-nav-link current" href="#" aria-current="page">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Works</a>
+          <li class="gra-nav-item">
+            <a class="gra-nav-link" href="#">Works</a>
           </li>
         </ul>
       </nav>

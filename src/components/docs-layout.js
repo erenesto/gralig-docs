@@ -8,33 +8,39 @@ const DocsLayout = ({ children }) => {
   const renderFooter = () => {
     if (intl.locale === 'tr') {
       return (
-        <footer className="footer">
+        <footer className="gra-footer">
           <span role="img" aria-label="Kulaklık">
-            🎧
+            🎧&nbsp;
           </span>
           <span role="img" aria-label="Kahve">
-            ☕️
+            ☕️&nbsp;
           </span>
           <span role="img" aria-label="Kalp">
             ❤️
           </span>
-          &amp; Gralig ile yapıldı. © 2019
+          &nbsp;&amp; Gralig ile yapıldı. © 2019 -
+          <a href="https://github.com/erenesto" target="_blank">
+            Eren Guldas
+          </a>
         </footer>
       )
     } else {
       return (
-        <footer className="footer">
-          © 2019, Built with &nbsp;
+        <footer className="gra-footer">
+          Built with &nbsp;
           <span role="img" aria-label="Headphone">
-            🎧
+            🎧&nbsp;
           </span>
           <span role="img" aria-label="Coffee">
-            ☕️
+            ☕️&nbsp;
           </span>
           <span role="img" aria-label="Heart">
             ❤️
           </span>
-          &amp; Gralig.
+          &nbsp;&amp; Gralig. © 2019 by
+          <a href="https://github.com/erenesto" target="_blank">
+            Eren Guldas
+          </a>
         </footer>
       )
     }
@@ -42,7 +48,7 @@ const DocsLayout = ({ children }) => {
 
   return (
     <>
-      <div className="gra-content">{children}</div>
+      <div className="gra-doc-content">{children}</div>
       {renderFooter()}
     </>
   )

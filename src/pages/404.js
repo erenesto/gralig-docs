@@ -20,11 +20,11 @@ const NotFoundPage = () => {
   return (
     <>
       <SEO title={intl.formatMessage({ id: 'pages.404' })} lang={intl.locale} />
-      <div className={`${isDark ? 'dark' : ''} gra-wrapper`}>
+      <div className={`${isDark ? 'dark' : ''} gra-doc-wrapper`}>
         <Header />
-        <div className="gra-main">
+        <div className="gra-doc-main">
           <main>
-            <div className="gra-content u-center-text">
+            <div className="gra-doc-content u-center-text">
               <h1>{intl.formatMessage({ id: '404.pagenotfound' })}</h1>
               <p>{intl.formatMessage({ id: '404.emptyroute' })}</p>
               <Link to="/docs" className="btn btn-outline">

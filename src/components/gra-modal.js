@@ -7,43 +7,43 @@ const GraModal = ({ show, modalToggle }) => {
 
   return (
     <div
-      className={`modal-wrapper ${show ? 'open' : ''}`}
-      id="gra-modal"
+      className={`gra-modal-wrapper ${show ? 'open' : ''}`}
+      id="gra-doc-modal"
       tabIndex="-1"
       role="dialog"
       aria-labelledby="modal_title"
     >
       <span
-        className="modal-overlay"
+        className="gra-modal-overlay"
         onKeyDown={modalToggle}
         onClick={modalToggle}
         data-dismiss="modal"
         role="button"
         tabIndex={-1}
       ></span>
-      <div className="modal">
-        <div className="modal-header">
-          <h5 className="modal-title" id="modal_title">
+      <div className="gra-modal">
+        <div className="gra-modal-header">
+          <h5 className="gra-modal-title" id="modal_title">
             {locale === 'tr' ? 'Açılır Pencere Başlığı' : 'Modal Title'}
           </h5>
         </div>
-        <div className="modal-body">
+        <div className="gra-modal-body">
           Mollit ullamco incididunt consequat consequat consectetur. Ut
           excepteur ipsum cillum eiusmod commodo sint occaecat esse et velit.
           Elit velit ad commodo ea sit nostrud qui. Qui proident duis veniam
           quis aliquip exercitation adipisicing laboris ex.
         </div>
-        <div className="modal-footer">
-          <div className="modal-actions">
+        <div className="gra-modal-footer">
+          <div className="gra-modal-actions">
             <button
-              className="btn btn-clear"
+              className="gra-btn gra-btn-clear"
               onClick={modalToggle}
               onKeyDown={e => onSpecificKeyPress(e, 'Enter', modalToggle)}
               data-dismiss="modal"
             >
               {locale === 'tr' ? 'Kapat' : 'Close'}
             </button>
-            <button className="btn">
+            <button className="gra-btn">
               {locale === 'tr' ? 'Onayla' : 'Accept'}
             </button>
           </div>

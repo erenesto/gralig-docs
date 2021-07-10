@@ -6,9 +6,9 @@ section: 'table'
 
 We created very simple and responsive table.
 
-<div class="gra-s-wrapper">
-  <div class="table-wrapper">
-    <table class="table">
+<div class="gra-doc-s-wrapper">
+  <div class="gra-table-wrapper">
+    <table class="gra-table">
       <thead>
         <tr>
           <th>Teams</th>
@@ -46,8 +46,8 @@ We created very simple and responsive table.
 </div>
 
 ```html
-<div class="table-wrapper">
-  <table class="table">
+<div class="gra-table-wrapper">
+  <table class="gra-table">
     <thead>
       <tr>
         <th>Teams</th>
@@ -86,9 +86,9 @@ We created very simple and responsive table.
 
 ## With Border
 
-<div class="gra-s-wrapper">
-  <div class="table-wrapper">
-    <table class="table table-bordered">
+<div class="gra-doc-s-wrapper">
+  <div class="gra-table-wrapper">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Teams</th>
@@ -126,8 +126,8 @@ We created very simple and responsive table.
 </div>
 
 ```html
-<div class="table-wrapper">
-  <table class="table table-bordered">
+<div class="gra-table-wrapper">
+  <table class="gra-table gra-table-bordered">
     <thead>
       <tr>
         <th>Teams</th>

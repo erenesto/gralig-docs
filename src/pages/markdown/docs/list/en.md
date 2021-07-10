@@ -6,36 +6,36 @@ section: 'list'
 
 Two different list created including normal and block.
 
-<div class="gra-s-wrapper">
-  <ul class="list">
-    <li class="list-item">Item 1</li>
-    <li class="list-item">Item 2</li>
-    <li class="list-item">Item 3</li>
+<div class="gra-doc-s-wrapper">
+  <ul class="gra-list">
+    <li class="gra-list-item">Item 1</li>
+    <li class="gra-list-item">Item 2</li>
+    <li class="gra-list-item">Item 3</li>
   </ul>
 </div>
 
 ```html
-<ul class="list">
-  <li class="list-item">Item 1</li>
-  <li class="list-item">Item 2</li>
-  <li class="list-item">Item 3</li>
+<ul class="gra-list">
+  <li class="gra-list-item">Item 1</li>
+  <li class="gra-list-item">Item 2</li>
+  <li class="gra-list-item">Item 3</li>
 </ul>
 ```
 
 ## Block
 
-<div class="gra-s-wrapper">
-  <ul class="block-list">
-    <li class="list-item">Item 1</li>
-    <li class="list-item">Item 2</li>
-    <li class="list-item">Item 3</li>
+<div class="gra-doc-s-wrapper">
+  <ul class="gra-block-list">
+    <li class="gra-list-item">Item 1</li>
+    <li class="gra-list-item">Item 2</li>
+    <li class="gra-list-item">Item 3</li>
   </ul>
 </div>
 
 ```html
-<ul class="block-list">
-  <li class="list-item">Item 1</li>
-  <li class="list-item">Item 2</li>
-  <li class="list-item">Item 3</li>
+<ul class="gra-block-list">
+  <li class="gra-list-item">Item 1</li>
+  <li class="gra-list-item">Item 2</li>
+  <li class="gra-list-item">Item 3</li>
 </ul>
 ```

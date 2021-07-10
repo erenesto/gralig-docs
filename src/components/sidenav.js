@@ -14,7 +14,7 @@ const SideNav = ({ path }) => {
     for (const group in sidenavLinks) {
       if (group === 'group1') {
         sideNavRender.push(
-          <li className="gra-sidenav-group" key={group}>
+          <li className="gra-doc-sidenav-group" key={group}>
             <ul>
               {sidenavLinks[group].map(link => (
                 <SideNavItem
@@ -29,7 +29,7 @@ const SideNav = ({ path }) => {
         )
       } else if (group === 'group2') {
         sideNavRender.push(
-          <li className="gra-sidenav-group" key={group}>
+          <li className="gra-doc-sidenav-group" key={group}>
             <ul>
               {sidenavLinks[group].map(link => (
                 <SideNavItem
@@ -44,7 +44,7 @@ const SideNav = ({ path }) => {
         )
       } else if (group === 'group3') {
         sideNavRender.push(
-          <li className="gra-sidenav-group" key={group}>
+          <li className="gra-doc-sidenav-group" key={group}>
             <ul>
               {sidenavLinks[group].map(link => (
                 <SideNavItem
@@ -67,13 +67,13 @@ const SideNav = ({ path }) => {
     <>
       {isActive && (
         <span
-          className="gra-side-nav-backdrop"
+          className="gra-doc-side-nav-backdrop"
           onKeyDown={toggleMenu}
           onClick={toggleMenu}
         ></span>
       )}
-      <nav className={`gra-sidenav ${isActive ? 'active' : ''}`}>
-        <ul className="gra-sidenav-list">{createNavGroups()}</ul>
+      <nav className={`gra-doc-sidenav ${isActive ? 'active' : ''}`}>
+        <ul className="gra-doc-sidenav-list">{createNavGroups()}</ul>
       </nav>
     </>
   )

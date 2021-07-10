@@ -16,11 +16,11 @@ const SideNavItem = ({ name, linkTo, path }) => {
   }, [sidenavLink, path, setActiveLink])
 
   return (
-    <li className="gra-sidenav-item" ref={sidenavLink}>
+    <li className="gra-doc-sidenav-item" ref={sidenavLink}>
       <Link
         to={linkAddress}
-        activeClassName="gra-sidenav-active-link"
-        className="gra-sidenav-item-link"
+        activeClassName="gra-doc-sidenav-active-link"
+        className="gra-doc-sidenav-item-link"
       >
         {name}
       </Link>

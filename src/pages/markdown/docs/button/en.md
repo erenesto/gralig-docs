@@ -8,102 +8,102 @@ You can use buttons created in different sizes, types and colors.
 
 ## Main
 
-<div class="gra-s-wrapper">
-  <button class="btn">button</button>
-  <button class="btn btn-outline">outlined</button>
-  <button class="btn btn-clear">clear</button>
-  <button class="btn" disabled>disabled</button>
+<div class="gra-doc-s-wrapper">
+  <button class="gra-btn">button</button>
+  <button class="gra-btn gra-btn-outline">outlined</button>
+  <button class="gra-btn gra-btn-clear">clear</button>
+  <button class="gra-btn" disabled>disabled</button>
 </div>
 
 ```html
-<button class="btn">button</button>
-<button class="btn btn-outline">outlined</button>
-<button class="btn btn-clear">clear</button>
-<button class="btn" disabled>disabled</button>
+<button class="gra-btn">button</button>
+<button class="gra-btn gra-btn-outline">outlined</button>
+<button class="gra-btn gra-btn-clear">clear</button>
+<button class="gra-btn" disabled>disabled</button>
 ```
 
 ## Sizes
 
-<div class="gra-s-wrapper">
-  <button class="btn btn-small">small</button>
-  <button class="btn">normal</button>
-  <button class="btn btn-large">large</button>
-  <button class="btn btn-full-width">full-width</button>
+<div class="gra-doc-s-wrapper">
+  <button class="gra-btn gra-btn-small">small</button>
+  <button class="gra-btn">normal</button>
+  <button class="gra-btn gra-btn-large">large</button>
+  <button class="gra-btn gra-btn-full-width">full-width</button>
 </div>
 
 ```html
-<button class="btn btn-small">small</button>
-<button class="btn">normal</button>
-<button class="btn btn-large">large</button>
-<button class="btn btn-full-width">full-width</button>
+<button class="gra-btn gra-btn-small">small</button>
+<button class="gra-btn">normal</button>
+<button class="gra-btn gra-btn-large">large</button>
+<button class="gra-btn gra-btn-full-width">full-width</button>
 ```
 
 ## Colors & Types
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div>
-    <button class="btn btn-blue">blue</button>
-    <button class="btn btn-blue btn-outline">blue</button>
-    <button class="btn btn-blue btn-clear">blue</button>
-    <button class="btn btn-blue" disabled>blue</button>
+    <button class="gra-btn gra-btn-blue">blue</button>
+    <button class="gra-btn gra-btn-blue gra-btn-outline">blue</button>
+    <button class="gra-btn gra-btn-blue gra-btn-clear">blue</button>
+    <button class="gra-btn gra-btn-blue" disabled>blue</button>
   </div>
   <div>
-    <button class="btn btn-yellow">yellow</button>
-    <button class="btn btn-yellow btn-outline">yellow</button>
-    <button class="btn btn-yellow btn-clear">yellow</button>
-    <button class="btn btn-yellow" disabled>yellow</button>
+    <button class="gra-btn gra-btn-yellow">yellow</button>
+    <button class="gra-btn gra-btn-yellow gra-btn-outline">yellow</button>
+    <button class="gra-btn gra-btn-yellow gra-btn-clear">yellow</button>
+    <button class="gra-btn gra-btn-yellow" disabled>yellow</button>
   </div>
   <div>
-    <button class="btn btn-green">green</button>
-    <button class="btn btn-green btn-outline">green</button>
-    <button class="btn btn-green btn-clear">green</button>
-    <button class="btn btn-green" disabled>green</button>
+    <button class="gra-btn gra-btn-green">green</button>
+    <button class="gra-btn gra-btn-green gra-btn-outline">green</button>
+    <button class="gra-btn gra-btn-green gra-btn-clear">green</button>
+    <button class="gra-btn gra-btn-green" disabled>green</button>
   </div>
   <div>
-    <button class="btn btn-red">red</button>
-    <button class="btn btn-red btn-outline">red</button>
-    <button class="btn btn-red btn-clear">red</button>
-    <button class="btn btn-red" disabled>red</button>
+    <button class="gra-btn gra-btn-red">red</button>
+    <button class="gra-btn gra-btn-red gra-btn-outline">red</button>
+    <button class="gra-btn gra-btn-red gra-btn-clear">red</button>
+    <button class="gra-btn gra-btn-red" disabled>red</button>
   </div>
 </div>
 
 ```html
 <div>
-  <button class="btn btn-blue">blue</button>
-  <button class="btn btn-blue btn-outline">blue</button>
-  <button class="btn btn-blue btn-clear">blue</button>
-  <button class="btn btn-blue" disabled>blue</button>
+  <button class="gra-btn gra-btn-blue">blue</button>
+  <button class="gra-btn gra-btn-blue gra-btn-outline">blue</button>
+  <button class="gra-btn gra-btn-blue gra-btn-clear">blue</button>
+  <button class="gra-btn gra-btn-blue" disabled>blue</button>
 </div>
 <div>
-  <button class="btn btn-yellow">yellow</button>
-  <button class="btn btn-yellow btn-outline">yellow</button>
-  <button class="btn btn-yellow btn-clear">yellow</button>
-  <button class="btn btn-yellow" disabled>yellow</button>
+  <button class="gra-btn gra-btn-yellow">yellow</button>
+  <button class="gra-btn gra-btn-yellow gra-btn-outline">yellow</button>
+  <button class="gra-btn gra-btn-yellow gra-btn-clear">yellow</button>
+  <button class="gra-btn gra-btn-yellow" disabled>yellow</button>
 </div>
 <div>
-  <button class="btn btn-green">green</button>
-  <button class="btn btn-green btn-outline">green</button>
-  <button class="btn btn-green btn-clear">green</button>
-  <button class="btn btn-green" disabled>green</button>
+  <button class="gra-btn gra-btn-green">green</button>
+  <button class="gra-btn gra-btn-green gra-btn-outline">green</button>
+  <button class="gra-btn gra-btn-green gra-btn-clear">green</button>
+  <button class="gra-btn gra-btn-green" disabled>green</button>
 </div>
 <div>
-  <button class="btn btn-red">red</button>
-  <button class="btn btn-red btn-outline">red</button>
-  <button class="btn btn-red btn-clear">red</button>
-  <button class="btn btn-red" disabled>red</button>
+  <button class="gra-btn gra-btn-red">red</button>
+  <button class="gra-btn gra-btn-red gra-btn-outline">red</button>
+  <button class="gra-btn gra-btn-red gra-btn-clear">red</button>
+  <button class="gra-btn gra-btn-red" disabled>red</button>
 </div>
 ```
 
 ## Other Types
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
 
 [Link](# 'Link Button')
-<input class="btn" type="button" value="Input" />
+<input class="gra-btn" type="button" value="Input" />
 
 </div>
 
 ```html
-<a class="btn" href="#" type="button">Link</a>
-<input class="btn" type="button" value="Input" />
+<a class="gra-btn" href="#" type="button">Link</a>
+<input class="gra-btn" type="button" value="Input" />
 ```

@@ -6,9 +6,9 @@ section: 'table'
 
 Çok basit ve mobil uyumlu bir tablo hazırladık.
 
-<div class="gra-s-wrapper">
-  <div class="table-wrapper">
-    <table class="table">
+<div class="gra-doc-s-wrapper">
+  <div class="gra-table-wrapper">
+    <table class="gra-table">
       <thead>
         <tr>
           <th>Takımlar</th>
@@ -46,8 +46,8 @@ section: 'table'
 </div>
 
 ```html
-<div class="table-wrapper">
-  <table class="table">
+<div class="gra-table-wrapper">
+  <table class="gra-table">
     <thead>
       <tr>
         <th>Takımlar</th>
@@ -86,9 +86,9 @@ section: 'table'
 
 ## Kenar Çizgili
 
-<div class="gra-s-wrapper">
-  <div class="table-wrapper">
-    <table class="table table-bordered">
+<div class="gra-doc-s-wrapper">
+  <div class="gra-table-wrapper">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Takımlar</th>
@@ -126,8 +126,8 @@ section: 'table'
 </div>
 
 ```html
-<div class="table-wrapper">
-  <table class="table table-bordered">
+<div class="gra-table-wrapper">
+  <table class="gra-table gra-table-bordered">
     <thead>
       <tr>
         <th>Takımlar</th>

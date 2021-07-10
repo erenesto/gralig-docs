@@ -14,9 +14,9 @@ Kullanabileceğiniz birçok `scss` değişken, oluşturduk. Kullanım için sade
 
 Başlangıç renk değişkenleri için [renkler](/docs/colors 'Renkler Sayfası') sayfasını kontrol edebilirsiniz.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Değişken</th>
@@ -43,17 +43,17 @@ Başlangıç renk değişkenleri için [renkler](/docs/colors 'Renkler Sayfası'
         <tr>
           <td>$font-thin</td>
           <td>font-weight</td>
-          <td>300</td>
+          <td>lighter</td>
         </tr>
         <tr>
           <td>$font-normal</td>
           <td>font-weight</td>
-          <td>400</td>
+          <td>normal</td>
         </tr>
         <tr>
           <td>$font-bold</td>
           <td>font-weight</td>
-          <td>600</td>
+          <td>bold</td>
         </tr>
         <tr>
           <td>$font-family-general</td>
@@ -168,9 +168,9 @@ Başlangıç renk değişkenleri için [renkler](/docs/colors 'Renkler Sayfası'
 
 ## Türetilmiş Değişkenler
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Değişken</th>
@@ -411,9 +411,9 @@ Başlangıç renk değişkenleri için [renkler](/docs/colors 'Renkler Sayfası'
 
 ## Karanlık Mod Değişkenleri
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Değişken</th>

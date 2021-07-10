@@ -29,11 +29,11 @@ const Layout = ({ data, children, location }) => {
       return <HomeLayout>{children}</HomeLayout>
     } else if (data.current && data.current.fields.page.layout === 'docs') {
       return (
-        <div className={`${isDark ? 'dark' : ''} gra-wrapper`}>
+        <div className={`${isDark ? 'dark' : ''} gra-doc-wrapper`}>
           <Header />
-          <div className="gra-main">
+          <div className="gra-doc-main">
             <SideNav path={location.pathname} />
-            <main className="gra-content-wrapper">{children}</main>
+            <main className="gra-doc-content-wrapper">{children}</main>
           </div>
         </div>
       )

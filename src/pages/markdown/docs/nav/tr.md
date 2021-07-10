@@ -6,25 +6,25 @@ section: 'nav'
 
 Navigasyon barında kullanmak üzere hazırlanmış yatay navigasyon komponenti.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
 <nav>
-<ul class="nav">
-<li class="nav-item">
+<ul class="gra-nav">
+<li class="gra-nav-item">
 
 [Ana Sayfa](/docs/nav/# 'NavLink')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [Hakkımızda](/docs/nav/# 'NavLink')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [İletişim](/docs/nav/# 'NavLinkCurrent')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [Çalışmalar](/docs/nav/# 'NavLink')
 
@@ -35,18 +35,18 @@ Navigasyon barında kullanmak üzere hazırlanmış yatay navigasyon komponenti.
 
 ```html
 <nav>
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Ana Sayfa</a>
+  <ul class="gra-nav">
+    <li class="gra-nav-item">
+      <a class="gra-nav-link" href="#">Ana Sayfa</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Hakkımızda</a>
+    <li class="gra-nav-item">
+      <a class="gra-nav-link" href="#">Hakkımızda</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link current" href="#" aria-current="page">İletişim</a>
+    <li class="gra-nav-item">
+      <a class="gra-nav-link current" href="#" aria-current="page">İletişim</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Çalışmalar</a>
+    <li class="gra-nav-item">
+      <a class="gra-nav-link" href="#">Çalışmalar</a>
     </li>
   </ul>
 </nav>
@@ -54,27 +54,27 @@ Navigasyon barında kullanmak üzere hazırlanmış yatay navigasyon komponenti.
 
 ## Tam Genişlik
 
-Tam genişlik için `.nav` classına ek olarak `.nav-fill` kullanabilirsiniz.
+Tam genişlik için `.gra-nav` classına ek olarak `.gra-nav-fill` kullanabilirsiniz.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
 <nav>
-<ul class="nav nav-fill">
-<li class="nav-item">
+<ul class="gra-nav gra-nav-fill">
+<li class="gra-nav-item">
 
 [Ana Sayfa](/docs/nav/# 'NavLink')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [Hakkımızda](/docs/nav/# 'NavLink')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [İletişim](/docs/nav/# 'NavLinkCurrent')
 
 </li>
-<li class="nav-item">
+<li class="gra-nav-item">
 
 [Çalışmalar](/docs/nav/# 'NavLink')
 
@@ -85,18 +85,18 @@ Tam genişlik için `.nav` classına ek olarak `.nav-fill` kullanabilirsiniz.
 
 ```html
 <nav>
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Ana Sayfa</a>
+  <ul class="gra-nav gra-nav-fill">
+    <li class="gra-nav-item">
+      <a class="gra-nav-link" href="#">Ana Sayfa</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Hakkımızda</a>
+    <li class="gra-nav-item">
+      <a class="gra-nav-link" href="#">Hakkımızda</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link current" href="#" aria-current="page">İletişim</a>
+    <li class="gra-nav-item">
+      <a class="gra-nav-link current" href="#" aria-current="page">İletişim</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Çalışmalar</a>
+    <li class="gra-nav-item">
+      <a class="gra-nav-link" href="#">Çalışmalar</a>
     </li>
   </ul>
 </nav>

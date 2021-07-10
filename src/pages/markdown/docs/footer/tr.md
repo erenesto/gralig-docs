@@ -6,12 +6,12 @@ section: 'footer'
 
 Altbilgi için kullanabileceğiniz basit komponent.
 
-<div class="gra-s-wrapper">
-  <footer class="footer">
+<div class="gra-doc-s-wrapper">
+  <footer class="gra-footer">
     Gralig ile yapıldı, © 2019
   </footer>
 </div>
 
 ```html
-<footer class="footer">Gralig ile yapıldı, © 2019</footer>
+<footer class="gra-footer">Gralig ile yapıldı, © 2019</footer>
 ```

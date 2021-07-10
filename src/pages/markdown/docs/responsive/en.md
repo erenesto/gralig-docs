@@ -13,9 +13,9 @@ Gralig uses 5 breakpoint variables and 2 mixins for mobile compatibility.
 
 ## Breakpoints
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Variable</th>

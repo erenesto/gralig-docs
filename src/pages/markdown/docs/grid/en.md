@@ -10,7 +10,7 @@ _This col or span views below are for example to see. They will not show up in n
 
 ## Columns
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row">
     <div class="col">
       <span class="col-test">col</span>
@@ -68,7 +68,7 @@ _This col or span views below are for example to see. They will not show up in n
 
 ## Column Sizes
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row">
     <div class="col col-10">
       <span class="col-test">col-10</span>
@@ -208,7 +208,7 @@ _This col or span views below are for example to see. They will not show up in n
 
 You can use `.col-span-*` to shift columns from left to specific spaces as below.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row">
     <div class="col col-10 col-span-90">
       <span class="col-test">col-10</span
@@ -356,7 +356,7 @@ You can use `.col-span-*` to shift columns from left to specific spaces as below
 
 When the columns come to mobile breakpoint in normal usage, it takes the 100% width of its container. You can prevent this by using `.row-mobile` and you can maintain column widths on mobile.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row row-mobile">
     <div class="col ">
       <span class="col-test">col</span>

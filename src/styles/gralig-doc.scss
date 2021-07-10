@@ -29,7 +29,7 @@ a {
   margin-top: $space-xxl;
 }
 
-.gra {
+.gra-doc {
   &-home-description {
     width: 100%;
     height: 100vh;
@@ -60,7 +60,7 @@ a {
   }
 
   &-nav {
-    .nav-link {
+    .gra-nav-link {
       cursor: pointer;
       line-height: 0;
       &::after {
@@ -165,11 +165,11 @@ a {
       font-size: 1.5rem;
       font-weight: $font-bold;
     }
-    .gra-menu-icon-wrapper {
+    .gra-doc-menu-icon-wrapper {
       display: flex;
       align-items: center;
     }
-    .gra-menu-icon-wrapper:first-of-type {
+    .gra-doc-menu-icon-wrapper:first-of-type {
       position: relative;
       margin-right: 4px;
       &::before {
@@ -297,7 +297,7 @@ a {
           background-color: mode('colorLinkFont');
         }
       }
-      &.gra-sidenav-active-link {
+      &.gra-doc-sidenav-active-link {
         color: $color-main;
         @include moder($modes) {
           color: mode('colorLinkHover');
@@ -327,7 +327,7 @@ a {
   &-code-highlight {
     margin-bottom: $space-l;
     position: relative;
-    .btn-copy-to-clipboard {
+    .gra-doc-btn-copy-to-clipboard {
       position: absolute;
       right: 0;
       top: 0;
@@ -375,7 +375,7 @@ a {
   }
 
   &-section-typography {
-    .heading-wrapper {
+    .gra-doc-heading-wrapper {
       display: flex;
       align-items: center;
       width: 100%;
@@ -385,11 +385,11 @@ a {
         width: 80%;
       }
     }
-    .heading,
-    .subheading {
+    .gra-heading,
+    .gra-subheading {
       margin: 0;
     }
-    .headings-small-info {
+    .gra-doc-headings-small-info {
       font-size: 14px;
       width: 13rem;
       code {
@@ -400,7 +400,7 @@ a {
     }
   }
   &-section-buttons {
-    .btn:not(.btn-copy-to-clipboard) {
+    .gra-btn:not(.gra-doc-btn-copy-to-clipboard) {
       margin: 6px;
     }
   }
@@ -414,7 +414,7 @@ a {
     }
   }
   &-section-breadcrumb {
-    .breadcrumb-item:not(:first-child) a::before {
+    .gra-breadcrumb-item:not(:first-child) a::before {
       @include caret-icon(-45deg, 0, -50%, $color-main);
       display: inline-block;
       position: absolute;
@@ -428,24 +428,24 @@ a {
     }
   }
   &-section-alerts {
-    .alerts-wrapper .alert:not(:last-of-type) {
+    .gra-doc-alerts-wrapper .gra-alert:not(:last-of-type) {
       margin-bottom: 6px;
     }
   }
   &-section-progress {
-    .progress-circle-wrapper {
+    .gra-progress-circle-wrapper {
       display: flex;
       align-items: center;
     }
-    .progress-circle {
+    .gra-progress-circle {
       margin-right: 1.2rem;
-      .progress-circle-value {
+      .gra-progress-circle-value {
         stroke-dashoffset: 380;
       }
     }
   }
   &-section-colors {
-    .card {
+    .gra-card {
       p {
         font-family: Consolas, Menlo, Courier, monospace;
         font-size: 1.2rem;
@@ -557,6 +557,10 @@ a {
   }
 }
 
+.gra-footer a {
+  margin-left: 5px;
+}
+
 em {
   font-size: 1.4rem;
 }
@@ -572,13 +576,13 @@ em {
   }
 }
 
-.modal-wrapper.open {
+.gra-modal-wrapper.open {
   display: block;
   opacity: 1;
   visibility: visible;
 }
 
-.form-group {
+.gra-form-group {
   margin-bottom: 24px;
 }
 

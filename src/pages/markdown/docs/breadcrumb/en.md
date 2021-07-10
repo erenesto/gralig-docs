@@ -6,25 +6,25 @@ section: 'breadcrumb'
 
 A simple component to use for breadcrumb.
 
-<div class="gra-s-wrapper">
-<nav class="breadcrumb" aria-label="breadcrumbs">
-<ul class="breadcrumb-list">
-<li class="breadcrumb-item">
+<div class="gra-doc-s-wrapper">
+<nav class="gra-breadcrumb" aria-label="breadcrumbs">
+<ul class="gra-breadcrumb-list">
+<li class="gra-breadcrumb-item">
 
 [Home](/docs/breadcrumb/# 'BreadcrumbLink')
 
 </li>
-<li class="breadcrumb-item">
+<li class="gra-breadcrumb-item">
 
 [About](/docs/breadcrumb/# 'BreadcrumbLink')
 
 </li>
-<li class="breadcrumb-item">
+<li class="gra-breadcrumb-item">
 
 [Contact](/docs/breadcrumb/# 'BreadcrumbLink')
 
 </li>
-<li class="breadcrumb-item">
+<li class="gra-breadcrumb-item">
 
 [Work](/docs/breadcrumb/# 'BreadcrumbLinkCurrent')
 
@@ -35,19 +35,19 @@ A simple component to use for breadcrumb.
 
 
 ```html
-<nav class="breadcrumb" aria-label="breadcrumbs">
-  <ul class="breadcrumb-list">
-    <li class="breadcrumb-item">
-      <a href="#" class="breadcrumb-link">Home</a>
+<nav class="gra-breadcrumb" aria-label="breadcrumbs">
+  <ul class="gra-breadcrumb-list">
+    <li class="gra-breadcrumb-item">
+      <a href="#" class="gra-breadcrumb-link">Home</a>
     </li>
-    <li class="breadcrumb-item">
-      <a href="#" class="breadcrumb-link">About</a>
+    <li class="gra-breadcrumb-item">
+      <a href="#" class="gra-breadcrumb-link">About</a>
     </li>
-    <li class="breadcrumb-item">
-      <a href="#" class="breadcrumb-link">Contact</a>
+    <li class="gra-breadcrumb-item">
+      <a href="#" class="gra-breadcrumb-link">Contact</a>
     </li>
-    <li class="breadcrumb-item">
-      <a class="current breadcrumb-link" aria-current="page">Work</a>
+    <li class="gra-breadcrumb-item">
+      <a class="gra-breadcrumb-link current" aria-current="page">Work</a>
     </li>
   </ul>
 </nav>

@@ -14,9 +14,9 @@ We created many variables you can use. For use them simply import the variables 
 
 You can check [colors](/docs/colors 'Colors Page') page for the initial color variables.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Variable</th>
@@ -43,17 +43,17 @@ You can check [colors](/docs/colors 'Colors Page') page for the initial color va
         <tr>
           <td>$font-thin</td>
           <td>font-weight</td>
-          <td>300</td>
+          <td>lighter</td>
         </tr>
         <tr>
           <td>$font-normal</td>
           <td>font-weight</td>
-          <td>400</td>
+          <td>normal</td>
         </tr>
         <tr>
           <td>$font-bold</td>
           <td>font-weight</td>
-          <td>600</td>
+          <td>bold</td>
         </tr>
         <tr>
           <td>$font-family-general</td>
@@ -168,9 +168,9 @@ You can check [colors](/docs/colors 'Colors Page') page for the initial color va
 
 ## Derived Variables
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Variable</th>
@@ -411,9 +411,9 @@ You can check [colors](/docs/colors 'Colors Page') page for the initial color va
 
 ## Dark Mode Variables
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Variable</th>

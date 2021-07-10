@@ -24,19 +24,17 @@ const Language = () => {
     if (ln && ln !== language && ln !== 'en') {
       changeLocale(ln)
     }
-
-
   }, [language])
 
   return (
     <IntlContextConsumer>
       {({ languages, language: currentLocale }) => (
-        <div className="gra-lang">
+        <div className="gra-doc-lang">
           {languages.map(lang => (
             <span
-              className={`nav-link gra-menu-icon-wrapper ${
-                currentLocale === lang ? 'gra-lang-active' : ''
-                }`}
+              className={`gra-nav-link gra-doc-menu-icon-wrapper ${
+                currentLocale === lang ? 'gra-doc-lang-active' : ''
+              }`}
               key={lang}
               role="button"
               tabIndex={0}

@@ -13,9 +13,9 @@ Gralig mobil uyumluluk için 5 kırılım noktası değişkeni ve 2 mixin aracı
 
 ## Kırılım Noktası Değişkenleri
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="table-wrapper">
-    <table class="table table-bordered">
+    <table class="gra-table gra-table-bordered">
       <thead>
         <tr>
           <th>Değişken</th>

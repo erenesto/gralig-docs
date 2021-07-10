@@ -15,12 +15,10 @@ export const RenderParagraph = ({ children }) => {
   return <p>{children}</p>
 }
 
-export const RenderTable = ({ children }) => {
-  return <table>hop</table>
-}
+// export const RenderTable = ({ children }) => {}
 
 export const RenderHeading2 = ({ children, className }) => {
-  if (className !== 'heading' && className !== 'subheading') {
+  if (className !== 'gra-heading' && className !== 'gra-subheading') {
     return <h2 className="gra-doc-h2">{children}</h2>
   } else {
     return <h2 className={className}>{children}</h2>
@@ -28,7 +26,7 @@ export const RenderHeading2 = ({ children, className }) => {
 }
 
 export const RenderHeading3 = ({ children, className }) => {
-  if (className !== 'heading' && className !== 'subheading') {
+  if (className !== 'gra-heading' && className !== 'gra-subheading') {
     return <h3 className="gra-doc-h3">{children}</h3>
   } else {
     return <h3 className={className}>{children}</h3>
@@ -112,12 +110,12 @@ export const RenderAnchor = ({ href, title, children }) => {
     (title !== null && titleToLowercase.includes('button')) ||
     titleToLowercase.includes('buton')
   ) {
-    return linkInsideOrOutside('btn')
+    return linkInsideOrOutside('gra-btn')
   } else if (
     (title !== null && titleToLowercase.includes('more')) ||
     titleToLowercase.includes('daha')
   ) {
-    return linkInsideOrOutside('btn btn-outline')
+    return linkInsideOrOutside('gra-btn gra-btn-outline')
   } else if (
     title !== null &&
     titleToLowercase.includes('breadcrumblinkcurrent')
@@ -128,9 +126,9 @@ export const RenderAnchor = ({ href, title, children }) => {
   } else if (title !== null && titleToLowercase.includes('navbarlogolink')) {
     return linkInsideOrOutside('navbar-logo-link')
   } else if (title !== null && titleToLowercase.includes('navlinkcurrent')) {
-    return linkInsideOrOutside('nav-link current')
+    return linkInsideOrOutside('gra-nav-link current')
   } else if (title !== null && titleToLowercase.includes('navlink')) {
-    return linkInsideOrOutside('nav-link')
+    return linkInsideOrOutside('gra-nav-link')
   } else {
     if (!href || href.startsWith('http')) {
       return <a href={href}>{children}</a>

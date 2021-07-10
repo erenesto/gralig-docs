@@ -10,7 +10,7 @@ _Aşağıdaki görünümler örnek olarak hazırlanmıştır ve normal kullanım
 
 ## Sütunlar
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row">
     <div class="col">
       <span class="col-test">col</span>
@@ -68,7 +68,7 @@ _Aşağıdaki görünümler örnek olarak hazırlanmıştır ve normal kullanım
 
 ## Sütun Boyutları
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row">
     <div class="col col-10">
       <span class="col-test">col-10</span>
@@ -208,7 +208,7 @@ _Aşağıdaki görünümler örnek olarak hazırlanmıştır ve normal kullanım
 
 Sütunları soldan belirli boşluklarda kaydırmak için aşağıdaki gibi `.col-span-*` kullanabilirsiniz.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row">
     <div class="col col-10 col-span-90">
       <span class="col-test">col-10</span
@@ -356,7 +356,7 @@ Sütunları soldan belirli boşluklarda kaydırmak için aşağıdaki gibi `.col
 
 Sütunlar normal kullanımda mobil kırılımına geldiğinde kapsayıcısının %100 genişliğini alır. `.row-mobile` kullanarak bunu engelleyebilir ve mobilde sütun genişliklerini koruyabilirsiniz.
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="row row-mobile">
     <div class="col ">
       <span class="col-test">col</span>

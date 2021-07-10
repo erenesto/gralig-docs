@@ -15,7 +15,7 @@ function Document({ currentLanguage, current, location }) {
   return (
     <DocsLayout location={location} layout={current.layout}>
       <SEO title={fields.title} lang={currentLanguage} />
-      <section className={`gra-section-${fields.section}`}>
+      <section className={`gra-doc-section-${fields.section}`}>
         <h1 className="gra-doc-h1">{fields.title}</h1>
         <Markdown
           markdown={fields.markdown}

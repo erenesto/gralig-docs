@@ -4,31 +4,31 @@ mdtype: 'MDHTML'
 section: 'custom-inputs'
 ---
 
-For using our customized inputs, you need to use `.custom-form-input` class for input, `.custom-form-label` class for label and `.custom-form-control` class for the wrapper.
+For using our customized inputs, you need to use `.gra-custom-form-input` class for input, `.gra-custom-form-label` class for label and `.gra-custom-form-control` class for the wrapper.
 
-Which one you are going to use between checkbox, radio or switch, you have to use their name with wrapper class.
+In addition, as you will see in the examples below, you should use the name of the relevant input next to the container class.
 
 ## Checkbox
 
-<div class="gra-s-wrapper">
-  <div class="custom-form-control checkbox">
-    <input class="custom-form-input" id="custom-checkbox" type="checkbox"  />
-    <label class="custom-form-label" for="user-content-custom-checkbox">Checkbox</label>
+<div class="gra-doc-s-wrapper">
+  <div class="gra-custom-form-control gra-checkbox">
+    <input class="gra-custom-form-input" id="custom-checkbox" type="checkbox"  />
+    <label class="gra-custom-form-label" for="user-content-custom-checkbox">Checkbox</label>
   </div>
-  <div class="custom-form-control checkbox">
-    <input class="custom-form-input" id="custom-checkbox-2" type="checkbox" disabled checked/>
-    <label class="custom-form-label" for="custom-checkbox-2">Checkbox Disabled</label>
+  <div class="gra-custom-form-control gra-checkbox">
+    <input class="gra-custom-form-input" id="custom-checkbox-2" type="checkbox" disabled checked/>
+    <label class="gra-custom-form-label" for="custom-checkbox-2">Checkbox Disabled</label>
   </div>
 </div>
 
 ```html
-<div class="custom-form-control checkbox">
-  <input class="custom-form-input" id="custom-checkbox" type="checkbox"  />
-  <label class="custom-form-label" for="custom-checkbox">Checkbox</label>
+<div class="gra-custom-form-control gra-checkbox">
+  <input class="gra-custom-form-input" id="custom-checkbox" type="checkbox"  />
+  <label class="gra-custom-form-label" for="custom-checkbox">Checkbox</label>
 </div>
-<div class="custom-form-control checkbox">
-  <input class="custom-form-input" id="custom-checkbox-2" type="checkbox" disabled checked/>
-  <label class="custom-form-label" for="custom-checkbox-2">Checkbox Disabled</label>
+<div class="gra-custom-form-control gra-checkbox">
+  <input class="gra-custom-form-input" id="custom-checkbox-2" type="checkbox" disabled checked/>
+  <label class="gra-custom-form-label" for="custom-checkbox-2">Checkbox Disabled</label>
 </div>
 ```
 
@@ -36,36 +36,36 @@ Which one you are going to use between checkbox, radio or switch, you have to us
 
 ## Radio
 
-<div class="gra-s-wrapper">
+<div class="gra-doc-s-wrapper">
   <div class="radio-group" role="radiogroup">
-    <div class="custom-form-control radio">
-      <input class="custom-form-input" id="custom-radio" type="radio" name="radio-c" />
-      <label class="custom-form-label" for="user-content-custom-radio">Radio - 1</label>
+    <div class="gra-custom-form-control gra-radio">
+      <input class="gra-custom-form-input" id="custom-radio" type="radio" name="radio-c" />
+      <label class="gra-custom-form-label" for="user-content-custom-radio">Radio - 1</label>
     </div>
-    <div class="custom-form-control radio">
-      <input class="custom-form-input" id="custom-radio-2" type="radio" name="radio-c" />
-      <label class="custom-form-label" for="user-content-custom-radio-2">Radio - 2</label>
+    <div class="gra-custom-form-control gra-radio">
+      <input class="gra-custom-form-input" id="custom-radio-2" type="radio" name="radio-c" />
+      <label class="gra-custom-form-label" for="user-content-custom-radio-2">Radio - 2</label>
     </div>
-    <div class="custom-form-control radio">
-      <input class="custom-form-input" id="custom-radio-3" type="radio" name="radio-c" disabled/>
-      <label class="custom-form-label" for="user-content-custom-radio-3">Radio Disabled</label>
+    <div class="gra-custom-form-control gra-radio">
+      <input class="gra-custom-form-input" id="custom-radio-3" type="radio" name="radio-c" disabled/>
+      <label class="gra-custom-form-label" for="user-content-custom-radio-3">Radio Disabled</label>
     </div>
   </div>
 </div>
 
 ```html
-<div class="radio-group" role="radiogroup">
-  <div class="custom-form-control radio">
-    <input class="custom-form-input" id="custom-radio" type="radio" name="radio-c" />
-    <label class="custom-form-label" for="custom-radio">Radio - 1</label>
+<div role="radiogroup">
+  <div class="gra-custom-form-control gra-radio">
+    <input class="gra-custom-form-input" id="custom-radio" type="radio" name="radio-c" />
+    <label class="gra-custom-form-label" for="custom-radio">Radio - 1</label>
   </div>
-  <div class="custom-form-control radio">
-    <input class="custom-form-input" id="custom-radio-2" type="radio" name="radio-c" />
-    <label class="custom-form-label" for="custom-radio-2">Radio - 2</label>
+  <div class="gra-custom-form-control gra-radio">
+    <input class="gra-custom-form-input" id="custom-radio-2" type="radio" name="radio-c" />
+    <label class="gra-custom-form-label" for="custom-radio-2">Radio - 2</label>
   </div>
-  <div class="custom-form-control radio">
-    <input class="custom-form-input" id="custom-radio-3" type="radio" name="radio-c" disabled/>
-    <label class="custom-form-label" for="custom-radio-3">Radio Disabled</label>
+  <div class="gra-custom-form-control gra-radio">
+    <input class="gra-custom-form-input" id="custom-radio-3" type="radio" name="radio-c" disabled/>
+    <label class="gra-custom-form-label" for="custom-radio-3">Radio Disabled</label>
   </div>
 </div>
 ```
@@ -74,25 +74,25 @@ Which one you are going to use between checkbox, radio or switch, you have to us
 
 ## Switch
 
-<div class="gra-s-wrapper">
-  <div class="custom-form-control switch">
-    <input class="custom-form-input" id="custom-switch" type="checkbox" name="" />
-    <label class="custom-form-label" for="user-content-custom-switch">Switch</label>
+<div class="gra-doc-s-wrapper">
+  <div class="gra-custom-form-control gra-switch">
+    <input class="gra-custom-form-input" id="custom-switch" type="checkbox" name="" />
+    <label class="gra-custom-form-label" for="user-content-custom-switch">Switch</label>
   </div>
-  <div class="custom-form-control switch">
-    <input class="custom-form-input" id="switch-disable" type="checkbox" disabled checked />
-    <label class="custom-form-label" for="switch-disable">Switch Disabled</label>
+  <div class="gra-custom-form-control gra-switch">
+    <input class="gra-custom-form-input" id="switch-disable" type="checkbox" disabled checked />
+    <label class="gra-custom-form-label" for="switch-disable">Switch Disabled</label>
   </div>
 </div>
 
 ```html
-<div class="custom-form-control switch">
-  <input class="custom-form-input" id="custom-switch" type="checkbox" name="" />
-  <label class="custom-form-label" for="custom-switch">Switch</label>
+<div class="gra-custom-form-control gra-switch">
+  <input class="gra-custom-form-input" id="custom-switch" type="checkbox" name="" />
+  <label class="gra-custom-form-label" for="custom-switch">Switch</label>
 </div>
-<div class="custom-form-control switch">
-  <input class="custom-form-input" id="switch-disable" type="checkbox" disabled checked />
-  <label class="custom-form-label" for="switch-disable">Switch Disabled</label>
+<div class="gra-custom-form-control gra-switch">
+  <input class="gra-custom-form-input" id="switch-disable" type="checkbox" disabled checked />
+  <label class="gra-custom-form-label" for="switch-disable">Switch Disabled</label>
 </div>
 ```
 

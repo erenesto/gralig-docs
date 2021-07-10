@@ -14,18 +14,22 @@ const Header = () => {
   const { isActive, toggleMenu } = useContext(NavMenuContext)
 
   return (
-    <header className="navbar gra-navbar">
-      <div className="navbar-logo">
-        <Link className="navbar-logo-link" to="/">
-          <img className="navbar-logo-img" src={logo} alt="Gralig CSS Logo" />
+    <header className="gra-navbar gra-doc-navbar">
+      <div className="gra-navbar-logo">
+        <Link className="gra-navbar-logo-link" to="/">
+          <img
+            className="gra-navbar-logo-img"
+            src={logo}
+            alt="Gralig CSS Logo"
+          />
         </Link>
       </div>
-      <div className="navbar-content">
-        <nav className="gra-nav">
-          <ul className="nav">
+      <div className="gra-navbar-content">
+        <nav className="gra-doc-nav">
+          <ul className="gra-nav">
             <li>
               <a
-                className="nav-link"
+                className="gra-nav-link"
                 href="https://www.npmjs.com/package/gralig"
                 tabIndex={0}
                 role="button"
@@ -36,7 +40,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                className="nav-link"
+                className="gra-nav-link"
                 href="https://github.com/erenesto/gralig"
                 tabIndex={0}
                 role="button"
@@ -47,7 +51,7 @@ const Header = () => {
             </li>
             <li>
               <span
-                className="nav-link"
+                className="gra-nav-link"
                 onKeyDown={e => onSpecificKeyPress(e, 'Enter', toggleTheme)}
                 onClick={toggleTheme}
                 tabIndex={0}
@@ -61,9 +65,9 @@ const Header = () => {
                 )}
               </span>
             </li>
-            <li className="gra-menu-icon-item">
+            <li className="gra-doc-menu-icon-item">
               <span
-                className="nav-link gra-menu-icon-wrapper"
+                className="gra-nav-link gra-doc-menu-icon-wrapper"
                 onClick={toggleMenu}
                 onKeyDown={toggleMenu}
                 role="button"
@@ -71,7 +75,7 @@ const Header = () => {
                 aria-label="Mobile Menu Button"
               >
                 <span
-                  className={`gra-menu-icon ${isActive ? 'open' : ''}`}
+                  className={`gra-doc-menu-icon ${isActive ? 'open' : ''}`}
                 ></span>
               </span>
             </li>

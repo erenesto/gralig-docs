@@ -30,11 +30,11 @@ const CodeHighlighter = ({ language, children }) => {
   }, [isCopied])
 
   return isDark ? (
-    <div className="gra-code-highlight">
+    <div className="gra-doc-code-highlight">
       <CopyToClipboard text={children} onCopy={() => setIsCopied(true)}>
         <button
           style={{ fontSize: '1rem' }}
-          className="btn btn-clear btn-copy-to-clipboard"
+          className="gra-btn gra-btn-clear gra-doc-btn-copy-to-clipboard"
         >
           <Icons
             style={{ marginRight: '6px' }}
@@ -53,11 +53,11 @@ const CodeHighlighter = ({ language, children }) => {
       </Highlighter>
     </div>
   ) : (
-    <div className="gra-code-highlight">
+    <div className="gra-doc-code-highlight">
       <CopyToClipboard text={children} onCopy={() => setIsCopied(true)}>
         <button
           style={{ fontSize: '1rem' }}
-          className="btn btn-clear btn-copy-to-clipboard"
+          className="gra-btn gra-btn-clear gra-doc-btn-copy-to-clipboard"
         >
           <Icons
             style={{ marginRight: '6px' }}

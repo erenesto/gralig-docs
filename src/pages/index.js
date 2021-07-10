@@ -42,13 +42,17 @@ const IndexPage = ({ path }) => {
         page={'home'}
         description={intl.formatMessage({ id: 'summary' })}
       />
-      <div className={`gra-home-description ${isDark ? 'dark' : ''}`}>
-        <img className="gra-home-logo" src={logo} alt="Gralig CSS Logo"></img>
-        <h1 className="gra-home-title">
+      <div className={`gra-doc-home-description ${isDark ? 'dark' : ''}`}>
+        <img
+          className="gra-doc-home-logo"
+          src={logo}
+          alt="Gralig CSS Logo"
+        ></img>
+        <h1 className="gra-doc-home-title">
           {intl.formatMessage({ id: 'description' })}
         </h1>
 
-        <div className="gra-home-footer">
+        <div className="gra-doc-home-footer">
           <Link to="/docs" className="btn">
             {intl.formatMessage({ id: 'words.docs' })}
           </Link>
