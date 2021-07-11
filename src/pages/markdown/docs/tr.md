@@ -32,4 +32,4 @@ yarn install gralig
 
 En son versiyonu Github üzerinden indirebilirsiniz.
 
-[Gralig.zip](https://github.com/erenesto/gralig/releases/download/v0.4.0/gralig-v0.4.0.zip 'Indir Butonu')
+[Gralig.zip](https://github.com/erenesto/gralig/archive/refs/tags/v1.0.0.zip 'Indir Butonu')

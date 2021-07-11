@@ -30,4 +30,4 @@ yarn install gralig
 
 Download the latest version from Github
 
-[Gralig.zip](https://github.com/erenesto/gralig/releases/download/v0.4.0/gralig-v0.4.0.zip 'Download Button')
+[Gralig.zip](https://github.com/erenesto/gralig/archive/refs/tags/v1.0.0.zip 'Download Button')
