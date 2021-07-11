@@ -27,7 +27,7 @@ const NotFoundPage = () => {
             <div className="gra-doc-content u-center-text">
               <h1>{intl.formatMessage({ id: '404.pagenotfound' })}</h1>
               <p>{intl.formatMessage({ id: '404.emptyroute' })}</p>
-              <Link to="/docs" className="btn btn-outline">
+              <Link to="/docs" className="gra-btn gra-btn-outline">
                 {intl.formatMessage({ id: '404.gotodocs' })}
               </Link>
             </div>

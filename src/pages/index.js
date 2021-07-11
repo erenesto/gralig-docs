@@ -53,18 +53,18 @@ const IndexPage = ({ path }) => {
         </h1>
 
         <div className="gra-doc-home-footer">
-          <Link to="/docs" className="btn">
+          <Link to="/docs" className="gra-btn">
             {intl.formatMessage({ id: 'words.docs' })}
           </Link>
           <a
             href="https://github.com/erenesto/gralig"
-            className="btn btn-outline"
+            className="gra-btn gra-btn-outline"
           >
             GITHUB
           </a>
           <a
             href="https://www.npmjs.com/package/gralig"
-            className="btn btn-outline"
+            className="gra-btn gra-btn-outline"
           >
             NPM
           </a>
