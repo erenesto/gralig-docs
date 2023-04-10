@@ -6,7 +6,7 @@ module.exports = {
     title: 'Gralig CSS',
     author: '@erenesto',
     description: 'A simple, grayish CSS Library',
-    siteUrl: 'https://gralig.com',
+    siteUrl: 'https://gralig.netlify.app/',
     defaultLanguage,
     supportedLanguages,
   },
@@ -18,8 +18,8 @@ module.exports = {
     icon: 'src/images/icons/icon.png',
   },
   sitemap: {
-    host: 'https://gralig.com',
-    sitemap: 'https://gralig.com/sitemap.xml',
+    host: 'https://gralig.netlify.app/',
+    sitemap: 'https://gralig.netlify.app/sitemap.xml',
     policy: [{ userAgent: '*', allow: '/' }],
   },
   google: {
